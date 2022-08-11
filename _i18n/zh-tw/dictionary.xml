@@ -1537,10 +1537,6 @@
   <block id="1cf97dd1e6f6c8888d8fa6dcede7fac9" category="inline-link-macro">將叢集新增至Astra Control管理</block>
   <block id="5762e45693912834af0b056c7343e9fa" category="paragraph">您先請 <block ref="093b5cb12bf9a5cd405873202b116b04" category="inline-link-macro-rx"></block>、您可以在叢集上安裝應用程式（Astra Control之外）、然後前往Astra Control的「應用程式」頁面、開始管理應用程式及其資源。</block>
   <block id="7b7f260c982647b3aee51c681be792ef" category="section-title">應用程式管理需求</block>
-  <block id="07eb1eefb9996b52d1fdfe23101a2b03" category="paragraph">Astra Control具備下列應用程式管理需求：</block>
-  <block id="040814594415b3be75eca728578ba39d" category="list-text">*授權*：若要使用Astra Control Center管理應用程式、您需要Astra Control Center授權。</block>
-  <block id="a23e8e619b2ffd1ec1e37fd1f16eee74" category="list-text">* StorageClass *：如果您安裝的應用程式已明確設定StorageClass、且需要複製應用程式、則複製作業的目標叢集必須具有原本指定的StorageClass。將具有明確設定StorageClass的應用程式複製到沒有相同StorageClass的叢集、將會失敗。</block>
-  <block id="7a9f49c6cd6dca3bc35b755523c76570" category="list-text">* Kubernetes資源*：使用未由Astra Control收集的Kubernetes資源的應用程式、可能沒有完整的應用程式資料管理功能。Astra Control會收集下列Kubernetes資源：</block>
   <block id="b8f3bc1c4097cf013ff9bb82ec30af2e" category="section-title">支援的應用程式安裝方法</block>
   <block id="a117e5ae155bb69285242a4c89875dd6" category="list-text">* Helm 3*：如果您使用Helm來安裝應用程式、Astra Control需要Helm版本3。完全支援使用Helm 3（或從Helm 2升級至Helm 3）來管理及複製應用程式。不支援管理以Helm 2安裝的應用程式。</block>
   <block id="1e98c3baca1e6d04cbb2c6a3e5f7a646" category="list-text">*操作員部署的應用程式*：Astra Control支援以命名空間範圍運算子安裝的應用程式。這些運算子通常採用「傳遞值」而非「傳遞參照」架構來設計。以下是一些遵循這些模式的營運者應用程式：</block>
@@ -2264,4 +2260,5 @@
   <block id="1eda8b1f4dfa35b119f2a579170d4546" category="sidebar">管理認證資料</block>
   <block id="1d79052461351a56ef4f9bf9f5837f4a" category="sidebar">使用REST API自動化</block>
   <block id="0b79795d3efc95b9976c7c5b933afce2" category="sidebar">簡介</block>
+  <block id="d1736d27c7efe09a7fdb5f5e3b18e8dc" category="paragraph">如需詳細資訊、請參閱 <block ref="f6d2e41142da7ccda158b71b34630966" category="inline-link-macro-rx"></block>。</block>
 </blocks>
