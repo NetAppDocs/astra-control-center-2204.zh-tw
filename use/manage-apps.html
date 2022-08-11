@@ -1059,7 +1059,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-08-03 21:05:52 +0000">08/03/2022</time>
+    <time datetime="2022-08-11 17:10:49 +0000">08/11/2022</time>
     
   
 
@@ -1074,83 +1074,10 @@
 <div class="paragraph">
 <p>您先請 <a href="../get-started/setup_overview.html#add-cluster">"將叢集新增至Astra Control管理"</a>、您可以在叢集上安裝應用程式（Astra Control之外）、然後前往Astra Control的「應用程式」頁面、開始管理應用程式及其資源。</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="應用程式管理需求">應用程式管理需求</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>Astra Control具備下列應用程式管理需求：</p>
+<p>如需詳細資訊、請參閱 <a href="../get-started/requirements.html#application-management-requirements">"應用程式管理需求"</a>。</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>授權</strong>：若要使用Astra Control Center管理應用程式、您需要Astra Control Center授權。</p>
-</li>
-<li>
-<p><strong>命名空間</strong>：Astra Control要求應用程式不超過一個命名空間、但命名空間可以包含多個應用程式。</p>
-</li>
-<li>
-<p>* StorageClass *：如果您安裝的應用程式已明確設定StorageClass、且需要複製應用程式、則複製作業的目標叢集必須具有原本指定的StorageClass。將具有明確設定StorageClass的應用程式複製到沒有相同StorageClass的叢集、將會失敗。</p>
-</li>
-<li>
-<p>* Kubernetes資源*：使用未由Astra Control收集的Kubernetes資源的應用程式、可能沒有完整的應用程式資料管理功能。Astra Control會收集下列Kubernetes資源：</p>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">叢集角色</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ClusterRoleBinding</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">組態對應</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">CustomResourceDesDefinition</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">CustomResource</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">可關係工作</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">示範</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HorizontalPodAutoscaler</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">入侵</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">部署組態</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">互鎖Webhook</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">PeristentVolume Claim</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Pod</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Podcast中斷預算</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Podcast範本</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">網路原則</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ReplicaSet</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">角色</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">角色繫結</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">路由</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">秘密</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">服務</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">服務帳戶</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">狀態集</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">驗證Webhook</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</li>
-</ul>
+</div>
 </div>
 <div class="sect2">
 <h3 id="支援的應用程式安裝方法">支援的應用程式安裝方法</h3>
@@ -1202,8 +1129,6 @@
 </td>
 </tr>
 </table>
-</div>
-</div>
 </div>
 </div>
 <div class="sect1">
