@@ -154,7 +154,6 @@
   <block id="ff66234381e2d5213adaf96c742cb4c3" category="paragraph">Astra Control Center也能讓您管理、移轉及保護在VM環境中執行的Kubernetes叢集。</block>
   <block id="0ec24420f91223b35f271fb4a5f65f2f" category="summary">瞭解Astra Control Center可執行的行動、會因授權狀態而異、以及Astra Control Center的使用如何影響授權使用量。</block>
   <block id="0b9c6eef4e3d3a222eb04e910d252339" category="doc">授權</block>
-  <block id="61ac76bdcf47d387dfb9efb8d39ce1d9" category="paragraph">Astra Control Center需要安裝授權、才能啟用完整的應用程式資料管理功能。當您部署Astra Control Center時、若無授權、Web UI會顯示橫幅、警告系統功能有限。</block>
   <block id="23c455802681d71fa7b93cceb849af79" category="paragraph">下列作業需要有效的授權：</block>
   <block id="866b10bb84f65c6e8641ad5e4d19560e" category="list-text">管理新應用程式</block>
   <block id="aba42bf1b2c7c8728d1d2b28ff0070bd" category="list-text">建立快照或備份</block>
@@ -2261,4 +2260,5 @@
   <block id="1d79052461351a56ef4f9bf9f5837f4a" category="sidebar">使用REST API自動化</block>
   <block id="0b79795d3efc95b9976c7c5b933afce2" category="sidebar">簡介</block>
   <block id="d1736d27c7efe09a7fdb5f5e3b18e8dc" category="paragraph">如需詳細資訊、請參閱 <block ref="f6d2e41142da7ccda158b71b34630966" category="inline-link-macro-rx"></block>。</block>
+  <block id="7710790456945bed9a23fff9f934b8fd" category="paragraph">Astra Control Center需要安裝授權、才能啟用完整的應用程式資料管理功能。當您部署Astra Control Center時、若無授權、Web UI會顯示橫幅、警告系統功能有限。</block>
 </blocks>
