@@ -25,39 +25,42 @@
   <!-- Elastic Search -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
 
-  <!-- Controls AsciiDoctor Admonition Blocks -->
-  <link rel="stylesheet" type="text/css" href="/zh-tw/astra-control-center-2204/css/font-awesome.min.css">
-
-  <!-- Controls the shadow effect for search dropdown menu -->
-  <link rel="stylesheet" href="/zh-tw/astra-control-center-2204/css/boxshadowproperties.css">
-
-  <!-- NetApp CSS controls the technical content -->
-  <link rel="stylesheet" type="text/css" href="/zh-tw/astra-control-center-2204/css/netapp.css">
-
-  <!-- WWW CSS Content -->
-  <link rel="stylesheet" type="text/css" href="/zh-tw/astra-control-center-2204/css/www-luci-dotcom.min.css">
-  <link rel="stylesheet" type="text/css" href="/zh-tw/astra-control-center-2204/css/www-netapp-dotcom.css">
-  <link rel="stylesheet" href="/zh-tw/astra-control-center-2204/css/www-netapp-library-critical.min.css" media="all" >
-  <link rel="stylesheet" href="/zh-tw/astra-control-center-2204/css/www-netapp-library-non-critical.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="stylesheet" href="/zh-tw/astra-control-center-2204/css/www-netapp-library-global-header-footer.min.css">
-
-  <!-- NetApp IE Customizations -->
-  <link rel="stylesheet" href='/zh-tw/astra-control-center-2204/css/na-utility.css' type='text/css'>
-  <link rel="stylesheet" href='/zh-tw/astra-control-center-2204/css/na-sidebar.css' type='text/css'>
-  <link rel='stylesheet' href='/zh-tw/astra-control-center-2204/css/clouddocs.css' type='text/css'>
-  <link rel='stylesheet' href='/zh-tw/astra-control-center-2204/css/custom-dropdown.css' type='text/css'>
-  <link rel='stylesheet' href='/zh-tw/astra-control-center-2204/css/na-pagenav.css' type='text/css'>
+  <!-- Combined CSS -->
+  <link rel="stylesheet" type="text/css" href="/zh-tw/astra-control-center-2204/css/netappdocs.css">
 
   
   <link rel="stylesheet" href="/zh-tw/astra-control-center-2204/css/landing-page.css" type="text/css">
   <link rel="stylesheet" href="/zh-tw/astra-control-center-2204/css/tabbed-blocks.css" type="text/css">
   <!-- Canonical url -->
   <link rel='stylesheet' href='/zh-tw/astra-control-center-2204/css/na-feature.css' type='text/css'><!-- Top level site integrations --><script>
-    if (document.location.hostname === "docs.netapp.com") {
+    function addAdobeLaunch(adobeId) {
+      var head = document.getElementsByTagName('head')[0];
+      var adobe = document.createElement("script");
+      adobe.type = "text/plain";
+      adobe.className = "optanon-category-C0002";
+      adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/"+adobeId+".min.js";
+      head.appendChild(adobe);
+    }
+
+    function addGoogleAnalytics(gtagId) {
+      var google = document.createElement("script");
+      google.type = "text/plain";
+      google.className = "optanon-category-C0002";
+      google.src = "https://www.googletagmanager.com/gtag/js?id="+gtagId;
+      var head = document.getElementsByTagName('head')[0];
+      head.appendChild(google);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', gtagId);
+    }
+
+    function addConsent(consentId) {
       var head = document.getElementsByTagName('head')[0];
       var onetrustConsent = document.createElement("script");
       onetrustConsent.type = "text/javascript";
-      onetrustConsent.src = "https://cdn.cookielaw.org/consent/72570c5c-fe30-465f-b0e0-b77f7fb4ae34/OtAutoBlock.js";
+      onetrustConsent.src = "https://cdn.cookielaw.org/consent/"+consentId+"/OtAutoBlock.js";
       head.appendChild(onetrustConsent);
 
       var onetrustScript = document.createElement("script");
@@ -65,40 +68,17 @@
       onetrustScript.src = "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js";
       onetrustScript.charset = "UTF-8";
       onetrustScript.dataset.documentLanguage = "true";
-      onetrustScript.dataset.domainScript = "72570c5c-fe30-465f-b0e0-b77f7fb4ae34";
+      onetrustScript.dataset.domainScript = consentId;
       head.appendChild(onetrustScript);
-    }
-
-    function OptanonWrapper() { }
-
-    if (document.location.hostname === "docs.netapp.com") {
-      var adobe = document.createElement("script");
-      adobe.type = "text/plain";
-      adobe.className = "optanon-category-C0002";
-      adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js";
-      head.appendChild(adobe);
-
-      var google = document.createElement("script");
-      google.type = "text/plain";
-      google.className = "optanon-category-C0002";
-      google.src = "https://www.googletagmanager.com/gtag/js?id=UA-81697994-3";
-      head.appendChild(google);
-
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-81697994-3');
-    }
+    }addConsent("72570c5c-fe30-465f-b0e0-b77f7fb4ae34");
+    addAdobeLaunch("launch-e9ff3acac59f");
+    addGoogleAnalytics("UA-81697994-3");function OptanonWrapper() { }
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 
   <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/zh-tw/astra-control-center-2204/js/na-search.js'></script><script src='/zh-tw/astra-control-center-2204/js/na-pagenav.js'></script><link rel='stylesheet' href='/zh-tw/astra-control-center-2204/css/prism.css' type='text/css'>
-  <link rel='stylesheet' href='/zh-tw/astra-control-center-2204/css/prism-netapp.css' type='text/css'>
-
-
-  <script src='/zh-tw/astra-control-center-2204/js/na-utility.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/zh-tw/astra-control-center-2204/js/na-search.js'></script><script src='/zh-tw/astra-control-center-2204/js/na-pagenav.js'></script><script src='/zh-tw/astra-control-center-2204/js/na-utility.js'></script>
   <script src='/zh-tw/astra-control-center-2204/js/clouddocs.js'></script>
   <script src='/zh-tw/astra-control-center-2204/js/jquery.navgoco.min.js'></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -139,6 +119,17 @@
               $("#mysidebar").navgoco('toggle', true);
           });
 
+          $(".sidebar-nav-container").on("scroll", function() {
+            $.cookie("sidebarScroll", $(".sidebar-nav-container").scrollTop(), {
+              path    : "/zh-tw/astra-control-center-2204"  
+            });
+          });
+          $(function() {
+            if ($.cookie("sidebarScroll")) {
+              $(".sidebar-nav-container").scrollTop($.cookie("sidebarScroll"));
+            }
+          });
+
       });
 
   </script>
@@ -169,7 +160,45 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/astra-control-center-2204/issues/new?body=Page%3A%20[Astra Control Center快速入門](https://docs.netapp.com/zh-tw/astra-control-center-2204/get-started/quick-start.html)" class="page-nav-contribute-link" role="button"><img src="/zh-tw/astra-control-center-2204/images/discuss-sm.svg" alt="" class="github-icon" />要求變更文件</a><a target="_blank" href="https://github.com/NetAppDocs/astra-control-center-2204/blob/main/get-started/quick-start.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-tw/astra-control-center-2204/images/edit-sm.svg" alt="" class="github-icon" />編輯此頁面</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-tw/astra-control-center-2204/images/article-sm.svg" alt="" class="github-icon" />瞭解如何作出貢獻</a></div>
+  <div class="page-nav-toolbar"><div id="version-dropdown-new" class="custom-dropdown" >
+  <div class="custom-dropdown-select unselected" title="Astra控制中心 22.04">
+    <label>版本</label>
+    <span translate="no" class="notranslate">Astra控制中心 22.04</span>
+    <img src="/zh-tw/astra-control-center-2204/images/chevron_up.svg" alt="" class="custom-icon chevrondown invisible" />
+    <img src="/zh-tw/astra-control-center-2204/images/chevron_down.svg" alt="" class="custom-icon chevronup" />
+  </div>
+
+  <ul class="custom-dropdown-menu"><li>
+      
+      <a href="https://docs.netapp.com/zh-tw/astra-control-center-2204/get-started/quick-start.html" target="_self">
+        <span translate="no" class="notranslate"><span>Astra控制中心</span><span class="version"> 22.04</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/zh-tw/astra-control-center/get-started/quick-start.html" target="_self">
+        <span translate="no" class="notranslate"><span>Astra控制中心</span><span class="version"> 22.08</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/zh-tw/astra-control-center-2112/get-started/quick-start.html" target="_self">
+        <span translate="no" class="notranslate"><span>Astra控制中心</span><span class="version"> 21.12</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/zh-tw/astra-control-center-2108/get-started/quick-start.html" target="_self">
+        <span translate="no" class="notranslate"><span>Astra控制中心</span><span class="version"> 21.08</span></span>
+      </a>
+                     
+    </li>
+    
+  </ul>
+</div><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/astra-control-center-2204/issues/new?body=Page%3A%20[Astra Control Center快速入門](https://docs.netapp.com/zh-tw/astra-control-center-2204/get-started/quick-start.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/zh-tw/astra-control-center-2204/images/discuss-sm.svg" alt="" class="github-icon" />要求變更文件</a><a target="_blank" href="https://github.com/NetAppDocs/astra-control-center-2204/blob/main/get-started/quick-start.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-tw/astra-control-center-2204/images/edit-sm.svg" alt="" class="github-icon" />編輯此頁面</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-tw/astra-control-center-2204/images/article-sm.svg" alt="" class="github-icon" />瞭解如何作出貢獻</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">在此頁面上</div>
@@ -253,6 +282,8 @@
       </div>
 
       
+      
+      
       <div class="search-property-bar">
         <div id="search-demo-container" class="searchbox n-property-bar__search">
           <div id="react-search" 
@@ -299,6 +330,10 @@
           <a href="https://docs.netapp.com/zh-cn/astra-control-center-2204/get-started/quick-start.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
         </li><li>
           <a href="https://docs.netapp.com/ko-kr/astra-control-center-2204/get-started/quick-start.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/fr-fr/astra-control-center-2204/get-started/quick-start.html" target="_self"><span translate="no" class="notranslate">Français</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/de-de/astra-control-center-2204/get-started/quick-start.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
         </li></ul>
     </div><!-- End Language Selector -->
 
@@ -341,6 +376,7 @@
   <!-- Sidebar Column -->
   
   <div class="col-md-3" id="sidebar-height">
+      <button id="btn-sidebar-collapse" onclick="hideSidebar()"><img src="/zh-tw/astra-control-center-2204/images/collapse.png" alt="收合瀏覽面板"></button>
       <div class="n-pdf-header">
   <a id="toggleButtonPdf" class="n-pdf-button" type="button">
     <img src="/zh-tw/astra-control-center-2204/images/pdf.png" alt="" width="16" height="16"/>可用的 PDF<span>
@@ -843,156 +879,511 @@
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
 </script><div class="sidebar-nav-container" id="mysidebardiv">
-  <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/index.html">
+  <ul id="mysidebar" class="nav"><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Astra Control Center 22.04文件"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/index.html">
         Astra Control Center 22.04文件
-      </a></li><li class="subfolders "><a href="/zh-tw/astra-control-center-2204/release-notes/rn_overview.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="版本資訊"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="/zh-tw/astra-control-center-2204/release-notes/rn_overview.html">
         <div class="na-navbar-padding"> 版本資訊</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/release-notes/whats-new.html">
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="此Astra Control Center版本的新功能"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/release-notes/whats-new.html">
         此Astra Control Center版本的新功能
-      </a></li><li class="subfolders "><a href="/zh-tw/astra-control-center-2204/release-notes/known-issues.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="已知問題"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="/zh-tw/astra-control-center-2204/release-notes/known-issues.html">
         <div class="na-navbar-padding"> 已知問題</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/release-notes/known-issues-ads.html">
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Astra Data Store和此Astra Control Center版本的已知問題"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/release-notes/known-issues-ads.html">
         Astra Data Store和此Astra Control Center版本的已知問題
-      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/release-notes/known-limitations.html">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="已知限制"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/release-notes/known-limitations.html">
         已知限制
-      </a></li></ul></li><li class="subfolders "><a href="#">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="概念"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
         <div class="na-navbar-padding"> 概念</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/concepts/intro.html">
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="瞭解Astra Control"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/concepts/intro.html">
         瞭解Astra Control
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/concepts/architecture.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="架構與元件"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/concepts/architecture.html">
         架構與元件
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/concepts/data-protection.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="資料保護"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/concepts/data-protection.html">
         資料保護
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/concepts/licensing.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="授權"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/concepts/licensing.html">
         授權
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/concepts/validated-vs-standard.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="已驗證與標準應用程式的比較"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/concepts/validated-vs-standard.html">
         已驗證與標準應用程式的比較
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/concepts/choose-class-and-size.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="儲存類別和PV大小"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/concepts/choose-class-and-size.html">
         儲存類別和PV大小
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/concepts/user-roles-namespaces.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="使用者角色和命名空間"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/concepts/user-roles-namespaces.html">
         使用者角色和命名空間
-      </a></li></ul></li><li class="subfolders "><a href="#">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="開始使用"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
         <div class="na-navbar-padding"> 開始使用</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/get-started/requirements.html">
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Astra Control Center需求"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/get-started/requirements.html">
         Astra Control Center需求
-      </a></li><li class="  active "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/get-started/quick-start.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Astra Control Center快速入門"
+      data-li-level="2#" 
+      class="  active "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/get-started/quick-start.html">
         Astra Control Center快速入門
-      </a></li><li class="subfolders "><a href="/zh-tw/astra-control-center-2204/get-started/install_overview.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="安裝總覽"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="/zh-tw/astra-control-center-2204/get-started/install_overview.html">
         <div class="na-navbar-padding"> 安裝總覽</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/get-started/install_acc.html">
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="安裝Astra Control Center"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/get-started/install_acc.html">
         安裝Astra Control Center
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/get-started/acc_operatorhub_install.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="使用OpenShift作業系統集線器安裝Astra Control Center"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/get-started/acc_operatorhub_install.html">
         使用OpenShift作業系統集線器安裝Astra Control Center
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/get-started/install_acc-cvo.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="安裝Astra Control Center搭配Cloud Volumes ONTAP 一套功能性儲存後端"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/get-started/install_acc-cvo.html">
         安裝Astra Control Center搭配Cloud Volumes ONTAP 一套功能性儲存後端
-      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/astra-control-center-2204/get-started/setup_overview.html">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="設定Astra控制中心"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="/zh-tw/astra-control-center-2204/get-started/setup_overview.html">
         <div class="na-navbar-padding"> 設定Astra控制中心</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/get-started/add-cluster-reqs.html">
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="新增叢集的必要條件"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/get-started/add-cluster-reqs.html">
         新增叢集的必要條件
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/get-started/add-custom-tls-certificate.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="新增自訂TLS憑證"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/get-started/add-custom-tls-certificate.html">
         新增自訂TLS憑證
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/get-started/acc-create-podsecuritypolicy.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="建立自訂Pod安全性原則"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/get-started/acc-create-podsecuritypolicy.html">
         建立自訂Pod安全性原則
-      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/get-started/faq.html">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="常見問題集"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/get-started/faq.html">
         常見問題集
-      </a></li></ul></li><li class="subfolders "><a href="#">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="使用Astra"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
         <div class="na-navbar-padding"> 使用Astra</div>
       </a>
-      <ul><li class="subfolders "><a href="#">
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="管理應用程式"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
         <div class="na-navbar-padding"> 管理應用程式</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/manage-apps.html">
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="開始管理應用程式"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/manage-apps.html">
         開始管理應用程式
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/define-custom-app.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="定義自訂應用程式"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/define-custom-app.html">
         定義自訂應用程式
-      </a></li></ul></li><li class="subfolders "><a href="#">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="保護應用程式"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
         <div class="na-navbar-padding"> 保護應用程式</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/protection-overview.html">
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="保護總覽"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/protection-overview.html">
         保護總覽
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/protect-apps.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="保護應用程式"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/protect-apps.html">
         保護應用程式
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/restore-apps.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="還原應用程式"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/restore-apps.html">
         還原應用程式
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/clone-apps.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="複製及移轉應用程式"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/clone-apps.html">
         複製及移轉應用程式
-      </a></li><li class="subfolders "><a href="/zh-tw/astra-control-center-2204/use/execution-hooks.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="管理應用程式執行掛勾"
+      data-li-level="3" 
+      class="subfolders "
+    ><a href="/zh-tw/astra-control-center-2204/use/execution-hooks.html">
         <div class="na-navbar-padding"> 管理應用程式執行掛勾</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/execution-hook-examples.html">
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="執行攔截範例"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/execution-hook-examples.html">
         執行攔截範例
-      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="檢視應用程式和叢集健全狀況"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
         <div class="na-navbar-padding"> 檢視應用程式和叢集健全狀況</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/view-dashboard.html">
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="儀表板摘要"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/view-dashboard.html">
         儀表板摘要
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/view-clusters.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="叢集健全狀況與詳細資料"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/view-clusters.html">
         叢集健全狀況與詳細資料
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/view-apps.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="應用程式健全狀況與詳細資料"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/view-apps.html">
         應用程式健全狀況與詳細資料
-      </a></li></ul></li><li class="subfolders "><a href="#">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="管理您的帳戶"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
         <div class="na-navbar-padding"> 管理您的帳戶</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/manage-users.html">
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="管理使用者"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/manage-users.html">
         管理使用者
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/manage-roles.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="管理角色"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/manage-roles.html">
         管理角色
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/manage-notifications.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="管理通知"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/manage-notifications.html">
         管理通知
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/manage-credentials.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="管理認證資料"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/manage-credentials.html">
         管理認證資料
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/view-account-activity.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="監控帳戶活動"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/view-account-activity.html">
         監控帳戶活動
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/update-licenses.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="更新現有授權"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/update-licenses.html">
         更新現有授權
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/manage-connections.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="管理儲存庫連線"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/manage-connections.html">
         管理儲存庫連線
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/manage-packages-acc.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="管理軟體套件"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/manage-packages-acc.html">
         管理軟體套件
-      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/manage-buckets.html">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="管理儲存庫"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/manage-buckets.html">
         管理儲存庫
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/manage-backend.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="管理儲存後端"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/manage-backend.html">
         管理儲存後端
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/monitor-protect.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="監控及保護基礎架構"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/monitor-protect.html">
         監控及保護基礎架構
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/unmanage.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="取消管理應用程式和叢集"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/unmanage.html">
         取消管理應用程式和叢集
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/upgrade-acc.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="升級Astra Control Center"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/upgrade-acc.html">
         升級Astra Control Center
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/uninstall_acc.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="解除安裝Astra Control Center"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/use/uninstall_acc.html">
         解除安裝Astra Control Center
-      </a></li></ul></li><li class="subfolders "><a href="#">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="使用REST API自動化"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
         <div class="na-navbar-padding"> 使用REST API自動化</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/rest-api/api-intro.html">
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="簡介"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/rest-api/api-intro.html">
         簡介
-      </a></li></ul></li><li class="subfolders "><a href="#">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="部署應用程式"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
         <div class="na-navbar-padding"> 部署應用程式</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/solutions/jenkins-deploy-from-helm-chart.html">
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="部署Jenkins"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/solutions/jenkins-deploy-from-helm-chart.html">
         部署Jenkins
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/solutions/mariadb-deploy-from-helm-chart.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="部署MariaDB"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/solutions/mariadb-deploy-from-helm-chart.html">
         部署MariaDB
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/solutions/mysql-deploy-from-helm-chart.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="部署MySQL"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/solutions/mysql-deploy-from-helm-chart.html">
         部署MySQL
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/solutions/postgres-deploy-from-helm-chart.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="部署Postgres"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/solutions/postgres-deploy-from-helm-chart.html">
         部署Postgres
-      </a></li></ul></li><li class="subfolders "><a href="#">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="知識與支援"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
         <div class="na-navbar-padding"> 知識與支援</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/support/troubleshooting-acc.html">
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="疑難排解"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/support/troubleshooting-acc.html">
         疑難排解
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/support/get-help.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="取得協助"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/support/get-help.html">
         取得協助
-      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/acc-earlier-versions.html">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="舊版"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/acc-earlier-versions.html">
         舊版
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/legal-notices.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="法律聲明"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/zh-tw/astra-control-center-2204/legal-notices.html">
         法律聲明
       </a></li></ul>
 </div>
@@ -1005,14 +1396,16 @@
 </script>
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
+<script>$("#mysidebar li.active").parents('ul').css("display","block");</script>
 
 
   </div>
   
 
   <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
-    <!-- Begin of page container --><article class="page-content">
+    <!-- Begin of page container --><article class="page-content" id="main">
       <div class="ie-utility">
+  <button id="btn-sidebar-expand" onclick="showSidebar()"><img src="/zh-tw/astra-control-center-2204/images/expand.png" alt="展開瀏覽面板"></button>
   <div class="ie-menu">
     <div class="n-breadcrumb">
       <ul class="n-breadcrumb__list">
@@ -1198,11 +1591,7 @@
         <div class="n-footer__copyright">
           <ul class="n-footer__copyright-list">
             <li class="n-footer__copyright-link">
-              <span class="n-footer__fine-print">對我們的網站有任何意見或要求？</span>
-              <a target="_self" href="javascript:netapp_mailto()">請與我們聯絡</a>
-            </li>
-            <li class="n-footer__copyright-link">
-              <a href="https://docs.netapp.com/zh-tw/announcements/">公告</a>
+              <a target="_self" href="javascript:netapp_mailto()">傳送有關本網頁的意見反應</a>
             </li>
           </ul>
         </div>
