@@ -6,7 +6,20 @@ settings:
   prod:
     pdf_enabled: true
     harmony_enabled: false
-  langs: zh-tw,us-en,ja-jp,zh-cn,ko-kr
+  versions:
+  - name: Astra控制中心
+    url: "/astra-control-center-2204"
+    version-number: '22.04'
+  - name: Astra控制中心
+    url: "/astra-control-center"
+    version-number: '22.08'
+  - name: Astra控制中心
+    url: "/astra-control-center-2112"
+    version-number: '21.12'
+  - name: Astra控制中心
+    url: "/astra-control-center-2108"
+    version-number: '21.08'
+  langs: zh-tw,us-en,ja-jp,zh-cn,ko-kr,fr-fr,de-de
 sidebar:
   entries:
   - title: Astra Control Center 22.04文件
