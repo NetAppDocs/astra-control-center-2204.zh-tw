@@ -17,8 +17,8 @@ summary: 若要在解決某些環境先決條件之後安裝Astra Control Center
 
 若要在Amazon Web Services（AWS）和Microsoft Azure中安裝Astra Control Center搭配Cloud Volumes ONTAP 使用整套儲存後端、請視您的雲端環境而定、執行下列步驟。
 
-*  Astra Control Center in Amazon Web Services
-*  Astra Control Center in Microsoft Azure
+* <<在Amazon Web Services中部署Astra Control Center>>
+* <<在Microsoft Azure中部署Astra Control Center>>
 
 
 
@@ -120,11 +120,11 @@ NOTE: AWS登錄權杖會在12小時內過期、之後您必須更新Docker映像
 
 以下將詳細說明每個步驟。
 
-.  that you have sufficient IAM permissions。
-.  a RedHat OpenShift cluster on AWS。
-.  AWS。
-.  NetApp Cloud Manager。
-.  Astra Control Center。
+. <<確保您擁有足夠的IAM權限>>。
+. <<在AWS上安裝RedHat OpenShift叢集>>。
+. <<設定AWS>>。
+. <<設定NetApp Cloud Manager>>。
+. <<安裝Astra Control Center>>。
 
 
 
@@ -222,7 +222,7 @@ TIP: 可作為單一節點或高可用度運作。Cloud Volumes ONTAP如果已�
 
 
 
-=== Azure的需求
+=== Azure的必備功能
 
 在Azure中部署Astra Control Center之前、您需要下列項目：
 
@@ -303,12 +303,12 @@ NOTE: 這些需求假設Astra Control Center是營運環境中唯一執行的應
 
 以下將詳細說明每個步驟。
 
-.  a RedHat OpenShift cluster on Azure。
-.  Azure resource groups。
-.  that you have sufficient IAM permissions。
-.  Azure。
-.  NetApp Cloud Manager。
-.  and configure Astra Control Center。
+. <<在Azure上安裝RedHat OpenShift叢集>>。
+. <<建立Azure資源群組>>。
+. <<確保您擁有足夠的IAM權限>>。
+. <<設定Azure>>。
+. <<設定NetApp Cloud Manager>>。
+. <<安裝及設定Astra Control Center>>。
 
 
 
@@ -395,6 +395,7 @@ done < astra-control-center-22.04.41.manifest
 
 請依照Cloud Manager文件完成下列步驟。請參閱 https://docs.netapp.com/us-en/occm/task_getting_started_azure.html["Azure中的Cloud Manager入門"^]。
 
+.您需要的產品
 以所需的IAM權限和角色存取Azure帳戶
 
 .步驟

@@ -15,7 +15,7 @@ summary: 若要在解決某些環境先決條件之後安裝Astra Control Center
 
 對於Red Hat OpenShift環境、您也可以使用 link:../get-started/acc_operatorhub_install.html["替代程序"] 使用OpenShift作業系統集線器安裝Astra Control Center。
 
-.您需要的是 #8217 ；需要的是什麼
+.您需要的產品
 * link:requirements.html["開始安裝之前、請先準備好環境以進行Astra Control Center部署"]。
 * 確保所有叢集操作員都處於健全狀態且可用。
 +
@@ -38,6 +38,7 @@ oc get apiservices
 * 您打算使用的Astra FQDN必須可路由傳送至此叢集。這表示您在內部DNS伺服器中有DNS項目、或是使用已註冊的核心URL路由。
 
 
+.關於這項工作
 Astra Control Center安裝程序會執行下列作業：
 
 * 將Astra元件安裝到「NetApp-acc」（或自訂命名）命名空間。
@@ -56,18 +57,19 @@ IMPORTANT: 請勿在整個安裝程序期間執行下列命令、以免刪除所
 
 NOTE: 如果您使用的是Red Hat的Podman而非Docker Engine、則可以使用Podman命令來取代Docker命令。
 
+.步驟
 若要安裝Astra Control Center、請執行下列步驟：
 
-*  and unpack the Astra Control Center bundle
-*  the NetApp Astra kubectl plugin
-*  the images to your local registry
-*  up namespace and secret for registries with auth requirements
-*  the Astra Control Center operator
-*  Astra Control Center
-*  Astra Control Center and operator installation
-*  system status
-*  up ingress for load balancing
-*  in to the Astra Control Center UI
+* <<下載並解壓縮Astra Control Center套裝組合>>
+* <<安裝NetApp Astra kubecl外掛程式>>
+* <<將映像新增至本機登錄>>
+* <<設定具有驗證需求之登錄的命名空間和機密>>
+* <<安裝Astra Control Center操作員>>
+* <<設定Astra控制中心>>
+* <<完整的Astra控制中心和操作員安裝>>
+* <<驗證系統狀態>>
+* <<設定入口以進行負載平衡>>
+* <<登入Astra Control Center UI>>
 
 
 
@@ -96,6 +98,7 @@ tar -vxzf astra-control-center-[version].tar.gz
 
 NetApp Astra「kubecll」命令列外掛程式可在執行與部署及升級Astra Control Center相關的一般工作時節省時間。
 
+.您需要的產品
 NetApp為不同的CPU架構和作業系統提供外掛程式的二進位檔。執行此工作之前、您必須先瞭解您的CPU和作業系統。在Linux和Mac作業系統上、您可以使用「uname -A」命令來收集此資訊。
 
 .步驟
@@ -275,8 +278,8 @@ vim astra_control_center_operator_deploy.yaml
 imagePullSecrets:
 - name: <name_of_secret_with_creds_to_local_registry>
 ----
-.. 將「kube-RBAC代理」映像的「[your _register_path]」變更為您將映像推入的登錄路徑 ,上一步。
-.. 將「acc oper-manager-manager」映像的「[your _register_path]」變更為您將映像推入的登錄路徑 ,上一步。
+.. 將「kube-RBAC代理」映像的「[your _register_path]」變更為您將映像推入的登錄路徑 <<substep_image_local_registry_push,上一步>>。
+.. 將「acc oper-manager-manager」映像的「[your _register_path]」變更為您將映像推入的登錄路徑 <<substep_image_local_registry_push,上一步>>。
 .. （若為使用Astra Data Store預覽的安裝）請參閱此已知問題 link:../release-notes/known-issues-ads.html#astra-data-store-cannot-be-used-as-a-storage-class-for-astra-control-center-due-to-mongodb-pod-liveness-probe-failure["儲存類別資源配置工具、以及您需要對Y反 洗錢進行的其他變更"]。
 +
 [listing, subs="+quotes"]
@@ -376,12 +379,12 @@ IMPORTANT: 如果您使用不需要授權的登錄、則必須刪除「imageRegi
 +
 .. 將「[your _register_path]（您的登錄路徑）」變更為您在上一個步驟中推送影像的登錄路徑。
 .. 將「帳戶名稱」字串變更為您要與帳戶建立關聯的名稱。
-.. 將「astraAddress」字串變更為您要在瀏覽器中用來存取Astra的FQDN。請勿在地址中使用「http：//」或「https：//」。複製此FQDN以供在中使用  in to the Astra Control Center UI,後續步驟。
-.. 將「電子郵件」字串變更為預設的初始系統管理員地址。複製此電子郵件地址以供在中使用  in to the Astra Control Center UI,後續步驟。
+.. 將「astraAddress」字串變更為您要在瀏覽器中用來存取Astra的FQDN。請勿在地址中使用「http：//」或「https：//」。複製此FQDN以供在中使用 <<登入Astra Control Center UI,後續步驟>>。
+.. 將「電子郵件」字串變更為預設的初始系統管理員地址。複製此電子郵件地址以供在中使用 <<登入Astra Control Center UI,後續步驟>>。
 .. 如果網站沒有網際網路連線、請將AutoSupport 「已註冊」改為「假」、否則連線網站則保留「真」。
 .. （選用）新增與帳戶相關之使用者的名字「firstName」和姓氏「lastName」。您可以在UI中立即或稍後執行此步驟。
 .. （可選）如果安裝需要、請將「儲存類別」值變更為其他Trident storageClass資源。
-.. （選用）如果您希望叢集在安裝後由Astra Control Center自動管理、而且您已經擁有 ,已建立包含此叢集之Kbeconfig的秘密下、在這個名為「astraKubeConfigSecret："Acc－kubeconfig－cred or custom secret name"的Yaml檔案中新增欄位、以提供密碼名稱
+.. （選用）如果您希望叢集在安裝後由Astra Control Center自動管理、而且您已經擁有 <<substep_kubeconfig_secret,已建立包含此叢集之Kbeconfig的秘密>>下、在這個名為「astraKubeConfigSecret："Acc－kubeconfig－cred or custom secret name"的Yaml檔案中新增欄位、以提供密碼名稱
 .. 請完成下列其中一個步驟：
 +
 *** *其他入侵控制器（擷取類型：一般）*：這是Astra控制中心的預設動作。部署Astra Control Center之後、您需要設定入口控制器、以URL顯示Astra Control Center。
@@ -577,6 +580,7 @@ kubectl get acc -o yaml -n [netapp-acc or custom namespace]
 
 
 .Y反 洗錢詳細資料範例
+[%collapsible]
 ====
 [listing, subs="+quotes"]
 ----
@@ -816,14 +820,14 @@ NOTE: 如果您不想設定入口控制器、可以設定「擷取類型：AccTr
 * OpenShift入口控制器
 
 
-.您需要的是 #8217 ；需要的是什麼
+.您需要的產品
 * 必要的 https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/["入口控制器"] 應已部署。
 * 。 https://kubernetes.io/docs/concepts/services-networking/ingress/#ingress-class["入口等級"] 應已建立對應於入口控制器的。
 * 您使用的Kubernetes版本介於v1.19和v1.22之間、甚至包括在內。
 
 
 .適用於Nginvin像 控制器的步驟
-. 建立類型的秘密 http://kubernetes.io/tls["「Kubernetes.IO/TLS」"] 如所述、在「NetApp-acc」（或自訂命名）命名空間中取得TLS私密金鑰和憑證 https://kubernetes.io/docs/concepts/configuration/secret/#tls-secrets["TLS機密"]。
+. 建立類型的秘密 http://kubernetes.io/tls["8a637503539b25b68130b6e8003579d9"] 如所述、在「NetApp-acc」（或自訂命名）命名空間中取得TLS私密金鑰和憑證 https://kubernetes.io/docs/concepts/configuration/secret/#tls-secrets["TLS機密"]。
 . 使用「v1beta1」（Kubernetes版本低於或1.22）或「v1」資源類型、部署「NetApp-acc」（或自訂命名）命名空間中的入口資源、以取代已過時或新架構：
 +
 .. 對於已過時的「v1Beta1」架構、請遵循以下範例：
@@ -902,13 +906,13 @@ oc create route edge --service=traefik
 安裝Astra Control Center之後、您將變更預設管理員的密碼、並登入Astra Control Center UI儀表板。
 
 .步驟
-. 在瀏覽器中、輸入您在「Astra Address」（astrAddress）中使用的FQDN、位於「Astra控制中心_min.yaml」（當）字段中  Astra Control Center,您安裝了Astra Control Center。
+. 在瀏覽器中、輸入您在「Astra Address」（astrAddress）中使用的FQDN、位於「Astra控制中心_min.yaml」（當）字段中 <<安裝Astra Control Center,您安裝了Astra Control Center>>。
 . 出現提示時、請接受自我簽署的憑證。
 +
 
 NOTE: 您可以在登入後建立自訂憑證。
 
-. 在Astra Control Center登入頁面中、輸入您在「Astra Control Center_min.yaml」CR中使用的「電子郵件」值  Astra Control Center,您安裝了Astra Control Center，然後是一次性密碼（「ACC-[UUUID]」）。
+. 在Astra Control Center登入頁面中、輸入您在「Astra Control Center_min.yaml」CR中使用的「電子郵件」值 <<安裝Astra Control Center,您安裝了Astra Control Center>>，然後是一次性密碼（「ACC-[UUUID]」）。
 +
 
 NOTE: 如果您輸入錯誤密碼三次、系統將鎖定管理員帳戶15分鐘。

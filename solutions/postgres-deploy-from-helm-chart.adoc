@@ -74,6 +74,7 @@ NOTE: 如果磁碟區大小已變更、請使用Kibibyte（Ki）、Mebibyte（Mi
 
 
 
+.結果
 這會執行下列動作：
 
 * 建立命名空間。

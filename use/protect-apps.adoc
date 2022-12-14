@@ -47,6 +47,7 @@ image:screenshot-config-protection-policy.png["範例組態原則的螢幕擷取
 . 選取*設定保護原則。*
 
 
+.結果
 Astra Control Center使用您定義的排程和保留原則、建立並保留快照和備份、以實作資料保護原則。
 
 
@@ -62,6 +63,7 @@ Astra Control Center使用您定義的排程和保留原則、建立並保留快
 . 檢閱快照摘要、然後選取* Snapshot *。
 
 
+.結果
 快照程序隨即開始。當「*資料保護*>*快照*」頁面*「動作*」欄中的狀態為*可用*時、快照就會成功。
 
 
@@ -83,13 +85,14 @@ NOTE: Astra Control Center中的S3鏟斗未報告可用容量。在備份或複�
 . 檢閱備份摘要、然後選取*備份*。
 
 
+.結果
 Astra Control Center會建立應用程式的備份。
 
 
 NOTE: 如果您的網路中斷或異常緩慢、備份作業可能會逾時。這會導致備份失敗。
 
 
-NOTE: 無法停止執行中的備份。如果您需要刪除備份、請等到備份完成後再使用中的指示  backups。若要刪除失敗的備份、 https://docs.netapp.com/us-en/astra-automation/index.html["使用Astra Control API"^]。
+NOTE: 無法停止執行中的備份。如果您需要刪除備份、請等到備份完成後再使用中的指示 <<刪除備份>>。若要刪除失敗的備份、 https://docs.netapp.com/us-en/astra-automation/index.html["使用Astra Control API"^]。
 
 
 NOTE: 資料保護作業（複製、備份、還原）及後續持續調整磁碟區大小之後、UI中會顯示新的磁碟區大小、延遲最多20分鐘。資料保護作業只需幾分鐘就能成功完成、您可以使用儲存後端的管理軟體來確認磁碟區大小的變更。
@@ -122,6 +125,7 @@ NOTE: 資料保護作業（複製、備份、還原）及後續持續調整磁�
 . 輸入「DELETE」一詞以確認刪除、然後選取*「Yes、Delete snapshot *（是、刪除快照*）」。
 
 
+.結果
 Astra Control Center會刪除快照。
 
 
@@ -140,4 +144,5 @@ NOTE: 無法停止執行中的備份。如果您需要刪除備份、請等到�
 . 輸入「DELETE」一詞以確認刪除、然後選取*「Yes、Delete backup*（是、刪除備份*）」。
 
 
+.結果
 Astra Control Center會刪除備份。

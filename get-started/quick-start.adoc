@@ -15,7 +15,8 @@ summary: 只要幾個步驟、就能開始使用Astra Control。
 
 歡迎試用！如果您想要試用Astra Control Center、可以使用90天試用版授權。請參閱 link:../get-started/setup_overview.html#add-a-license-for-astra-control-center["授權資訊"] 以取得詳細資料。
 
-.span class="image"><imgrc="https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png"[] alt="1"></span>檢閱Kubernetes叢集需求
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一"] 檢閱Kubernetes叢集需求
+[role="quick-margin-list"]
 * Astra可搭配Kubernetes叢集、搭配Trident設定ONTAP 的支援功能、包括後端的功能、或是Astra Data Store儲存後端。
 * 叢集必須以健全狀態執行、且至少有三個線上工作者節點。
 * 叢集必須執行Kubernetes。
@@ -24,7 +25,8 @@ summary: 只要幾個步驟、就能開始使用Astra Control。
 [role="quick-margin-para"]
 link:../get-started/requirements.html["深入瞭解Astra Control Center需求"]。
 
-.span class="image"><imgrc="https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png"[] Alt="2"></span>下載並安裝Astra控制中心
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"] 下載並安裝Astra Control Center
+[role="quick-margin-list"]
 * 從下載Astra Control Center https://mysupport.netapp.com/site/products/all/details/astra-control-center/downloads-tab["NetApp支援網站Astra Control Center下載頁面"^]。
 * 在您的本機環境中安裝Astra Control Center。
 +
@@ -35,7 +37,8 @@ link:../get-started/requirements.html["深入瞭解Astra Control Center需求"]�
 [role="quick-margin-para"]
 link:../get-started/install_overview.html["深入瞭解如何安裝Astra Control Center"]。
 
-.span class="image"><imgrc="https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png"[] alt="there"></span>完成一些初始設定工作
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"] 完成一些初始設定工作
+[role="quick-margin-list"]
 * 新增授權。
 * 新增Kubernetes叢集、Astra Control Center會探索詳細資料。
 * 新增ONTAP 一個功能不一的 https://docs.netapp.com/us-en/astra-data-store/index.html["Astra資料儲存區"] 儲存後端：
@@ -45,13 +48,16 @@ link:../get-started/install_overview.html["深入瞭解如何安裝Astra Control
 [role="quick-margin-para"]
 link:../get-started/setup_overview.html["深入瞭解初始設定程序"]。
 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四"] 使用Astra控制中心
 [role="quick-margin-list"]
 完成Astra Control Center的設定之後、接下來您可以：
 
+[role="quick-margin-list"]
 * 管理應用程式。 link:../use/manage-apps.html["深入瞭解如何管理應用程式"]。
 * 您也可以選擇連線至NetApp Cloud Insights 解決方案、在Astra Control Center UI內顯示系統健全狀況、容量和處理量的指標。 link:../use/monitor-protect.html["深入瞭解連線Cloud Insights 到NetApp"]。
 
 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["五"] 請從本快速入門繼續
 [role="quick-margin-para"]
 link:../get-started/install_overview.html["安裝Astra Control Center"]。
 

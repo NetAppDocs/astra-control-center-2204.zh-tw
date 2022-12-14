@@ -13,7 +13,7 @@ summary: 若要升級Astra Control Center、您必須依照所述步驟下載套
 
 若要升級Astra Control Center、請從NetApp支援網站下載安裝套件、並完成以下指示、以升級您環境中的Astra Control Center元件。您可以使用此程序、在連線網際網路或無線環境中升級Astra Control Center。
 
-.您需要的是 #8217 ；需要的是什麼
+.您需要的產品
 * link:../get-started/requirements.html["開始升級之前、請確保環境仍符合Astra Control Center部署的最低需求"]。
 * 確保所有叢集操作員都處於健全狀態且可用。
 +
@@ -36,16 +36,17 @@ oc get apiservices
 * 登出您的Astra Control Center。
 
 
+.關於這項工作
 Astra Control Center升級程序會引導您完成下列高層級步驟：
 
-*  the Astra Control Center bundle
-*  the bundle and change directory
-*  the images to your local registry
-*  the updated Astra Control Center operator
-*  Astra Control Center
-*  third-party services (Optional)
-*  system status
-*  up ingress for load balancing
+* <<下載Astra Control Center套裝組合>>
+* <<解壓縮套件並變更目錄>>
+* <<將映像新增至本機登錄>>
+* <<安裝更新的Astra Control Center操作員>>
+* <<升級Astra Control Center>>
+* <<升級協力廠商服務（選用）>>
+* <<驗證系統狀態>>
+* <<設定入口以進行負載平衡>>
 
 
 
@@ -143,8 +144,8 @@ vim astra_control_center_operator_deploy.yaml
 imagePullSecrets:
 - name: <name_of_secret_with_creds_to_local_registry>
 ----
-.. 將「kube-RBAC代理」映像的「[your _register_path]」變更為您將映像推入的登錄路徑 ,上一步。
-.. 將「acc oper-manager-manager」映像的「[your _register_path]」變更為您將映像推入的登錄路徑 ,上一步。
+.. 將「kube-RBAC代理」映像的「[your _register_path]」變更為您將映像推入的登錄路徑 <<substep_image_local_registry_push,上一步>>。
+.. 將「acc oper-manager-manager」映像的「[your _register_path]」變更為您將映像推入的登錄路徑 <<substep_image_local_registry_push,上一步>>。
 .. 將下列值新增至「env」區段：
 +
 [listing]
@@ -239,7 +240,7 @@ kubectl edit acc -n [netapp-acc or custom namespace]
 ----
 +
 
-NOTE: 您的登錄路徑必須符合您在中推送映像的登錄路徑 ,上一步。
+NOTE: 您的登錄路徑必須符合您在中推送映像的登錄路徑 <<substep_image_local_registry_push,上一步>>。
 
 . 在Astra Control Center CR的「Pec」內的「additionalValues」中新增下列行：
 +
@@ -369,7 +370,7 @@ NOTE: 如需有關「負載平衡器」和入口服務類型的其他詳細資�
 * OpenShift入口控制器
 
 
-.您需要的是 #8217 ；需要的是什麼
+.您需要的產品
 * 在CR規格中、
 +
 ** 如果出現「crd.externalTraefik」、則應設定為「假」或
@@ -382,7 +383,7 @@ NOTE: 如需有關「負載平衡器」和入口服務類型的其他詳細資�
 
 
 .適用於Nginvin像 控制器的步驟
-. 使用現有的秘密「安全測試證書」、或建立類型的機密 http://kubernetes.io/tls["「Kubernetes.IO/TLS」"] 如所述、在「NetApp-acc」（或自訂命名）命名空間中取得TLS私密金鑰和憑證 https://kubernetes.io/docs/concepts/configuration/secret/#tls-secrets["TLS機密"]。
+. 使用現有的秘密「安全測試證書」、或建立類型的機密 http://kubernetes.io/tls["8a637503539b25b68130b6e8003579d9"] 如所述、在「NetApp-acc」（或自訂命名）命名空間中取得TLS私密金鑰和憑證 https://kubernetes.io/docs/concepts/configuration/secret/#tls-secrets["TLS機密"]。
 . 在「NetApp-acc」（或自訂命名）命名空間中、針對已過時或新架構部署入口資源：
 +
 .. 對於已過時的架構、請遵循以下範例：

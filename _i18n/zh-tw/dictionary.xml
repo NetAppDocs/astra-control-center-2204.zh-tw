@@ -429,7 +429,6 @@
   <block id="73c219a393057feacc35c345709d0eff" category="paragraph">如果您使用Red Hat OpenShift、可以使用Red Hat認證的操作員來安裝Astra Control Center。請使用此程序從安裝Astra Control Center<block ref="a0bebb9db4c42678b95afc86229a893d" category="inline-link-rx"></block> 或使用Red Hat OpenShift Container Platform。</block>
   <block id="07d25e4715e49135a64667c0c238798e" category="inline-link-macro">剩餘步驟</block>
   <block id="b34733c94c2ec2f94f6765fc88c9f8db" category="paragraph">完成此程序之後、您必須返回安裝程序、才能完成 <block ref="3a285f0bf32f130cd082e260eb98d4dd" category="inline-link-macro-rx"></block> 以驗證安裝是否成功並登入。</block>
-  <block id="a711863513c11f3a6d86294acc7be0ba" category="list-title">您需要的是 #8217 ；需要的是什麼</block>
   <block id="2b305f607904d67cd2da521366334e8c" category="inline-link-macro">開始安裝之前、請先準備好環境以進行Astra Control Center部署</block>
   <block id="44e141a783b8346b1ee5c52bcf894d19" category="list-text"><block ref="689b20f2e0a9cb0a12bc48475b3f81ee" category="inline-link-macro-rx"></block>。</block>
   <block id="cffc15bb864472cd1fadfc05a2ff6ba0" category="list-text">從OpenShift叢集、確保所有叢集操作員都處於正常狀態（「Available」（可用）為「true」（真））：</block>
@@ -498,7 +497,6 @@
   <block id="1d57e0a24077636df90da71912e901ba" category="list-text">保留預設的儲存類別。</block>
   <block id="6b9265a82fa5bd326052ec55e040a54a" category="list-text">定義客戶需求日處理偏好設定。</block>
   <block id="752136dc4b557a30d80aab0135d2d8d0" category="list-text">選取「Create」（建立）。</block>
-  <block id="0a20c90d5270bed19fcaf851778c663b" category="section-title">下一步</block>
   <block id="510a796972d54f6936dbae0081373fc0" category="inline-link-macro">設定工作</block>
   <block id="25bd4bfe1fe1f3d4f00d0a880c5c7b69" category="paragraph">確認Astra Control Center安裝成功、然後完成 <block ref="3a285f0bf32f130cd082e260eb98d4dd" category="inline-link-macro-rx"></block> 以登入。此外、您也可以執行來完成部署 <block ref="c74ac040317626af0342a18a145cdbb7" category="inline-link-macro-rx"></block>。</block>
   <block id="b1151aae9531d2f5e85d085e8878cea6" category="summary">如果您只是想要快速回答問題、這個常見問題集就能幫上忙。</block>
@@ -639,7 +637,6 @@
   <block id="a18ffe589f51b2e8842d425e72f3267a" category="list-text">。<block ref="a5882513c2df5d3067eddd81ae049c5c" category="inline-link-rx"></block> 應已建立對應於入口控制器的。</block>
   <block id="f249cbb12b555fa6b1b839d1fbb9cf54" category="list-text">您使用的Kubernetes版本介於v1.19和v1.22之間、甚至包括在內。</block>
   <block id="729bdb5319ea7e408d8db1fc3179d448" category="list-title">適用於Nginvin像 控制器的步驟</block>
-  <block id="8a637503539b25b68130b6e8003579d9" category="inline-link">「Kubernetes.IO/TLS」</block>
   <block id="a980dad9ace20d62c935af0cd906e94b" category="inline-link">TLS機密</block>
   <block id="9f951818010de2aab97830e9f0c7256b" category="list-text">建立類型的秘密<block ref="37832da3e75d3d08f1b0f5b5ed8a3dc0" category="inline-link-rx"></block> 如所述、在「NetApp-acc」（或自訂命名）命名空間中取得TLS私密金鑰和憑證<block ref="749b9942574f6d94028c602d678053d4" category="inline-link-rx"></block>。</block>
   <block id="17aaf3b5b4a5c0e670d8632344228dc1" category="list-text">使用「v1beta1」（Kubernetes版本低於或1.22）或「v1」資源類型、部署「NetApp-acc」（或自訂命名）命名空間中的入口資源、以取代已過時或新架構：</block>
@@ -684,20 +681,17 @@
   <block id="15dd8f83e9a999edc6eae56c5aec726e" category="paragraph">本頁提供Astra Control Center入門所需步驟的高階概觀。每個步驟中的連結都會帶您前往提供更多詳細資料的頁面。</block>
   <block id="b777e6ba4555d404b00c2436d03ae649" category="inline-link-macro">授權資訊</block>
   <block id="dc9e569caa79effd430c7ea63ceff7be" category="paragraph">歡迎試用！如果您想要試用Astra Control Center、可以使用90天試用版授權。請參閱 <block ref="3d35b4f40b39e7d8200f90f9d624f8f4" category="inline-link-macro-rx"></block> 以取得詳細資料。</block>
-  <block id="4854d4c0301c6f34c76f1cb78057e09e" category="list-title">span class="image"&gt;&lt;imgrc=<block ref="0c3becc25d95e48b9ca863002a042824" category="inline-link-rx"></block> alt="1"&gt;&lt;/span&gt;檢閱Kubernetes叢集需求</block>
   <block id="89110f39cddf501c149d691e3219c46f" category="list-text">Astra可搭配Kubernetes叢集、搭配Trident設定ONTAP 的支援功能、包括後端的功能、或是Astra Data Store儲存後端。</block>
   <block id="0deb5023224ed4d71135e9bae6dff9d4" category="list-text">叢集必須以健全狀態執行、且至少有三個線上工作者節點。</block>
   <block id="5f08198ddd920cae8e4af705793b2a56" category="list-text">叢集必須執行Kubernetes。</block>
   <block id="e34728b4f7a3f87b9d4e4bc0568096e1" category="inline-link-macro">深入瞭解Astra Control Center需求</block>
   <block id="dc36d12219c1097713b63def4e923028" category="paragraph"><block ref="cb100f378703845999b4907e7c8315fb" category="inline-link-macro-rx"></block>。</block>
-  <block id="9384595b10ef347b2da67882c7b37bd7" category="list-title">span class="image"&gt;&lt;imgrc=<block ref="c9bdd0fd7d7224adcf67691b15f15281" category="inline-link-rx"></block> Alt="2"&gt;&lt;/span&gt;下載並安裝Astra控制中心</block>
   <block id="afdff0e68ce5b4b3109d398df16872f7" category="inline-link">NetApp支援網站Astra Control Center下載頁面</block>
   <block id="b6511e86f155fe09cdd3bb8e739ea6b5" category="list-text">從下載Astra Control Center<block ref="287561c5277beeaf3b39a65b237114c8" category="inline-link-rx"></block>。</block>
   <block id="276a11727deff1a1f5ebf349b23835fc" category="list-text">在您的本機環境中安裝Astra Control Center。</block>
   <block id="0e941f8350a728f8786d81c6ce155c8c" category="paragraph">或者、使用Red Hat作業系統集線器安裝Astra Control Center。</block>
   <block id="4cb444388821c2b32d8c80c962e7f1c0" category="inline-link-macro">深入瞭解如何安裝Astra Control Center</block>
   <block id="869e88fdb2291fe31fc2aeb4bc0d3c4f" category="paragraph"><block ref="9eecb239704d706edd0e9065cdf42037" category="inline-link-macro-rx"></block>。</block>
-  <block id="80de081c75779cda8e2db1de0f292684" category="list-title">span class="image"&gt;&lt;imgrc=<block ref="ddd753dc2858fe3a5582f20b300a0541" category="inline-link-rx"></block> alt="there"&gt;&lt;/span&gt;完成一些初始設定工作</block>
   <block id="f13e95a655fb97423bd52082209d8781" category="list-text">新增授權。</block>
   <block id="89a40ca78d4ff20ec6d54ba006768895" category="list-text">新增Kubernetes叢集、Astra Control Center會探索詳細資料。</block>
   <block id="8035d5d39b2b48f6ec1a3133b688513c" category="inline-link">Astra資料儲存區</block>
@@ -761,11 +755,9 @@
   <block id="b7d863d6846eaf1689410c02279f9ea6" category="section-title">新增儲存後端</block>
   <block id="07bb61072986729e824079c9eb528582" category="paragraph">您可以新增儲存後端、以便Astra Control管理其資源。您可以在託管叢集上部署儲存後端、或使用現有的儲存後端。</block>
   <block id="eb33ac2274505b5f55f336ecd9e9a2d2" category="paragraph">將Astra Control中的儲存叢集管理為儲存後端、可讓您在持續磁碟區（PV）與儲存後端之間建立連結、以及取得額外的儲存指標。</block>
-  <block id="f8f5539f53262607b5f2bff0f2048a87" category="list-title">您的部署需求：#8217；現有Astra Data Store部署的需求</block>
   <block id="bbcdee2c81617430cf13df9d72e93bd4" category="list-text">您已新增Kubernetes應用程式叢集和基礎運算叢集。</block>
   <block id="129d92c88545c014f5981e4bedd69fd4" category="inline-link-macro">新增叢集</block>
   <block id="dc03b544598d0dfcfdee0b1fce2a4730" category="admonition">在您新增適用於Astra Data Store的Kubernetes應用程式叢集、並由Astra Control管理之後、叢集會在探索到的後端清單中顯示為「Unmanaged」。接下來、您必須新增包含Astra Data Store的運算叢集、並作為Kubernetes應用程式叢集的基礎。您可以從UI的*後端*執行此動作。選取叢集的「動作」功能表、選取「管理」、然後選取 <block ref="8c30ee7267ee6c93cf0c195b661c2cd2" category="inline-link-macro-rx"></block>。在「Unmanaged」叢集狀態變更為Kubernetes叢集名稱之後、您可以繼續新增後端。</block>
-  <block id="5f8f1c10343756cee5ac9c33e098132e" category="list-title">您的部署需求：#8217；需要新的Astra Data Store部署</block>
   <block id="e149dd131ab58984f98a85e4acdc17f3" category="inline-link-macro">已上傳您要部署的安裝套件版本</block>
   <block id="371c46463ca3b465cd0a0b198363c17f" category="list-text">您有 <block ref="ce9e25f6db2a9b698807ac8ac2ea2d16" category="inline-link-macro-rx"></block> 至Astra Control可存取的位置。</block>
   <block id="562a8ee2a8f15700012f29228a3198c7" category="list-text">您已新增要用於部署的Kubernetes叢集。</block>
@@ -853,7 +845,6 @@
   <block id="a57d95e33fbdffe3b4bd71d5b0be74cd" category="list-text">選擇*儲存類別*類別。</block>
   <block id="b76660fac98aeb4fc46b77e989e6d8b0" category="list-text">針對您要設為預設的儲存類別、選取「*動作*」功能表。</block>
   <block id="b4789b0ec041cd5e51f32c2f901a0951" category="list-text">選擇*設為預設*。</block>
-  <block id="3f297ef15cde0668e93b35f2752fd4fd" category="section-title">接下來呢？</block>
   <block id="f5c61eabb41590a473fa2d0d115e63c1" category="paragraph">現在您已經登入Astra Control Center並新增叢集、就可以開始使用Astra Control Center的應用程式資料管理功能。</block>
   <block id="1b4fcfaacbd0ae3e24bc82f8d7a82211" category="inline-link-macro">管理使用者</block>
   <block id="a2ef00bfa82a9800d86855a4a32ccef6" category="list-text"><block ref="a2ef00bfa82a9800d86855a4a32ccef6" category="inline-link-macro-rx"></block></block>
@@ -1007,7 +998,6 @@
   <block id="5f70f12e51733f39df8a8d8f2f0742da" category="section-title">在Amazon Web Services中部署Astra Control Center</block>
   <block id="b4504a5af800e56b2ac7bc310c520499" category="paragraph">您可以在Amazon Web Services（AWS）公有雲上的自我管理Kubernetes叢集上部署Astra Control Center。</block>
   <block id="09cd08225c53bd8f4ccf737618d3fd24" category="paragraph">部署Astra Control Center僅支援自我管理的OpenShift Container Platform（OCP）叢集。</block>
-  <block id="4ad0f595b9dbd4c0336e372a8a1b2410" category="section-title">AWS所需的功能</block>
   <block id="a5a36964a87d94d5ac0851af923c64fc" category="paragraph">在AWS中部署Astra Control Center之前、您需要下列項目：</block>
   <block id="e7e1ddd48b888f0547b40d916ec5553d" category="inline-link-macro">Astra Control Center授權要求</block>
   <block id="b488bebfd7a3a01cdcc54ea5856291cb" category="list-text">Astra Control Center授權。請參閱 <block ref="fc4957629b78fc8c58b84966810cc78b" category="inline-link-macro-rx"></block>。</block>
@@ -1098,7 +1088,6 @@
   <block id="1cb58fa5a8f36029f128e85d88276810" category="paragraph">遵循標準 <block ref="ef8e47848fa28ef11d8d85ade3f221ee" category="inline-link-macro-rx"></block>。</block>
   <block id="4d9093ca668edda8a4b7f1d5efe8d4bd" category="section-title">在Microsoft Azure中部署Astra Control Center</block>
   <block id="7f18f262f0f4112be8239133aa15cff4" category="paragraph">您可以將Astra Control Center部署在Microsoft Azure公有雲上的自我管理Kubernetes叢集上。</block>
-  <block id="24fdd2eaa17fe7802a949abb767e47ff" category="section-title">Azure的需求</block>
   <block id="0868fde25a786c798cfe63227a2e632c" category="paragraph">在Azure中部署Astra Control Center之前、您需要下列項目：</block>
   <block id="80495d67a6c40d68dcd4966f400a72b8" category="list-text">Red Hat OpenShift Container Platform（OCP）4.8.</block>
   <block id="067c001dbf7480cc26099ff0edfb8bda" category="list-text">Azure認證、具備可讓您建立儲存區和連接器的權限</block>
@@ -1173,7 +1162,6 @@
   <block id="a9a11c7d000cd067981f61a0db579f74" category="summary">您應該執行易用性檢查、以確保叢集已準備好新增至Astra控制中心。</block>
   <block id="0ab8b406c4d5e3b8a7e5b402912b73fc" category="doc">新增叢集的必要條件</block>
   <block id="84fccda9e18ab736ae1e33ef33ff8543" category="paragraph">在新增叢集之前、您應確保符合先決條件。您也應該執行資格檢查、以確保叢集已準備好新增至Astra控制中心。</block>
-  <block id="32ce911ba9da44dfbcba79bbe607d8f0" category="section-title">新增叢集之前所需的資源</block>
   <block id="46071ecf3cc6ea1619ad76021e951cc6" category="list-text">下列叢集類型之一：</block>
   <block id="04836771e0f63e9503643a0ab68fa3c1" category="list-text">執行OpenShift 4.6-8、4.7、4.8或4.9的叢集</block>
   <block id="3a2b605b2443215a0b7ae1bc41decc01" category="list-text">使用RKE1執行Rancher 2.5.x、2.5.x或2.6的叢集</block>
@@ -1832,15 +1820,11 @@
   <block id="9c4b5c958d6364ac3b17f0aa5a50e29d" category="paragraph">您可以使用Astra Control Center為應用程式建立備份、複製、快照及保護原則。備份應用程式有助於您的服務和相關資料盡可能可用；在災難案例中、從備份還原可確保應用程式及其相關資料的完整還原、並將中斷時間降至最低。備份、複製和快照有助於防範勒索軟體、意外資料遺失和環境災難等常見威脅。 <block ref="6b6e09024640eb9ec4bbda9f054e4ca3" category="inline-link-macro-rx"></block>。</block>
   <block id="fe2011653552de71bf2a04defdef5e3d" category="section-title">應用程式保護工作流程</block>
   <block id="9e3e52a15539d6b76c9af7b7c901f2dc" category="paragraph">您可以使用下列範例工作流程、開始保護應用程式。</block>
-  <block id="a04c6aa912ab1752fccd834c4a0468b9" category="section-title">備份所有應用程式</block>
   <block id="cdb972c8ec0f0d2d064eee29da832b09" category="inline-link-macro">建立所有應用程式的手動備份</block>
   <block id="bb9745866a03e99751c67559a4b5bbfc" category="paragraph">為了確保應用程式立即受到保護、 <block ref="153c1de46633dd7b9ee4197b0f57d4e6" category="inline-link-macro-rx"></block>。</block>
-  <block id="fc728311492264f387b6d56bf7f401d9" category="section-title">為每個應用程式設定保護原則</block>
   <block id="67d8aac0ef877e89b323dda77c01cdc7" category="inline-link-macro">為每個應用程式設定保護原則</block>
   <block id="a6f3f1cac5047bfc8c8a549d7555afb4" category="paragraph">若要自動化未來的備份與快照、 <block ref="be33481d5db8c6459d2a9f9986e47ba8" category="inline-link-macro-rx"></block>。舉例來說、您可以從每週備份和每日快照開始著手、兩個快照均保留一個月。強烈建議使用保護原則來自動化備份與快照、而不要手動備份與快照。</block>
-  <block id="68db57ac71c439bd714299714a3d5cd5" category="section-title">選用：調整保護原則</block>
   <block id="2afcb2016ee556b04a072d6535bbab55" category="paragraph">隨著應用程式及其使用模式的改變、請視需要調整保護原則、以提供最佳保護。</block>
-  <block id="ae923994b95458260e1a5b8c8c593bf1" category="section-title">發生災難時、請還原您的應用程式</block>
   <block id="7ce9ebbb5de6892ca270cea878bd99d1" category="inline-link-macro">還原最新的備份</block>
   <block id="dd27127bd92a34c602fa40bc2a1cdd3e" category="paragraph">如果發生資料遺失、您可以透過進行恢復 <block ref="550aec8aa1d184571b143fbb368e4c54" category="inline-link-macro-rx"></block> 每個應用程式的第一名。然後您可以還原最新的快照（如果有）。</block>
   <block id="0d67cfbbc2ee350c7d7ba6b5512b268e" category="summary">建立自訂應用程式可讓您將Kubernetes叢集的元素群組成單一應用程式。</block>
@@ -2080,14 +2064,12 @@
   <block id="a11ca2c2dd5144bf630dd5eb29b7cc67" category="list-text">輸入符合密碼需求的密碼。</block>
   <block id="57d4c802b66507e7e8b66d11f3a59a6f" category="list-text">再次輸入密碼進行確認。</block>
   <block id="45e3b3a50e0542121cdf2766502b7b56" category="list-text">選擇*變更密碼*。</block>
-  <block id="90f1c6fc655d106b5040673f4fce5f99" category="section-title">重設其他使用者的密碼</block>
   <block id="777944860c5bbcdb1b4a4a0a593efb52" category="paragraph">如果您的帳戶具有「管理員」或「擁有者」角色權限、您可以重設其他使用者帳戶和您自己的密碼。當您重設密碼時、您會設定使用者登入時必須變更的暫用密碼。</block>
   <block id="db30d3c2fee806f0319b663d27edf75c" category="list-text">選取「*動作*」下拉式清單。</block>
   <block id="df429da64d721747277606b598df29c4" category="list-text">選擇*重設密碼*。</block>
   <block id="67873c21262ba112b2e21148d43428f5" category="list-text">輸入符合密碼需求的暫用密碼。</block>
   <block id="7ba107a1d1f1a8008563386e4edebd3d" category="admonition">下次使用者登入時、系統會提示使用者變更密碼。</block>
   <block id="3930015dcc2810869591e35a2b5d714b" category="list-text">選擇*重設密碼*。</block>
-  <block id="a3f6d57c07e3d951867e570c6f3e5028" category="section-title">變更使用者的角色</block>
   <block id="24c0d48852d7cd070e2d6f992f4c74ab" category="paragraph">擁有擁有者角色的使用者可以變更所有使用者的角色、而擁有管理員角色的使用者則可以變更擁有管理員、成員或檢視者角色的使用者角色。</block>
   <block id="697f40aaae8b73ccaa173cd46b34fbd2" category="list-text">選取新角色。</block>
   <block id="47666ee116070193fb46cfa946f72486" category="list-text">若要將限制套用至角色、請啟用*限制角色至限制*核取方塊、然後從清單中選取限制。</block>
@@ -2262,4 +2244,30 @@
   <block id="d1736d27c7efe09a7fdb5f5e3b18e8dc" category="paragraph">如需詳細資訊、請參閱 <block ref="f6d2e41142da7ccda158b71b34630966" category="inline-link-macro-rx"></block>。</block>
   <block id="7710790456945bed9a23fff9f934b8fd" category="paragraph">Astra Control Center需要安裝授權、才能啟用完整的應用程式資料管理功能。當您部署Astra Control Center時、若無授權、Web UI會顯示橫幅、警告系統功能有限。</block>
   <block id="558e41f71155360e3f8ee151e27ea06f" category="paragraph">如需詳細資訊、請參閱 <block ref="ad125f0a3036e9b5f57b3a7077f489d9" category="inline-link-macro-rx"></block>。</block>
+  <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">結果</block>
+  <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">開始之前</block>
+  <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">一</block>
+  <block id="13a0d74de4f994f2861da351c22e5549" category="list-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> 檢閱Kubernetes叢集需求</block>
+  <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">二</block>
+  <block id="6e6d8bfff1b16149f8c62cfee0d2f62e" category="list-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> 下載並安裝Astra Control Center</block>
+  <block id="ca8a2087e5557e317599344687a57391" category="inline-image-macro">三</block>
+  <block id="ba9e9d1eb144bbf0eb66ffe3fb01e03a" category="list-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> 完成一些初始設定工作</block>
+  <block id="981b8fcee42e1e726a67a2b9a98ea6e9" category="inline-image-macro">四</block>
+  <block id="9824425bd5418e5e140ee6b8561b8914" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block> 使用Astra控制中心</block>
+  <block id="e5d9de39f7ca1ba2637e5640af3ae8aa" category="inline-image-macro">五</block>
+  <block id="4e661ed0899ae91f577701320636fabf" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block> 請從本快速入門繼續</block>
+  <block id="d59db7846bd10b6d60d21543df9faa9e" category="list-title">您需要的產品</block>
+  <block id="01e12de62fa77fda2815719aed8ff892" category="section-title">下一步</block>
+  <block id="9ecb27bf50e09cec4cda2e18d84ea4da" category="list-title">現有Astra Data Store部署所需的資源</block>
+  <block id="75098be5cdce8831c807233c237587a4" category="list-title">全新Astra Data Store部署所需的資源</block>
+  <block id="58eaebf972358f1cf03d386a4ade1a0f" category="section-title">接下來呢？</block>
+  <block id="190b1d4301402be73ef9a56adefaf47b" category="section-title">新增叢集之前所需的功能</block>
+  <block id="9905787058ed1f891f5110340336c6f4" category="section-title">AWS所需的功能</block>
+  <block id="e4f3253ab12e0c60faa03ce6ef1c9784" category="section-title">Azure的必備功能</block>
+  <block id="6d2d6dcdeb7eba42ceceeb112f05b859" category="section-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> 備份所有應用程式</block>
+  <block id="596a8ca466f62d03c2dfc376a65cac71" category="section-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> 為每個應用程式設定保護原則</block>
+  <block id="286778446d447b5a9df4054a3b3dd6f3" category="section-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> 選用：調整保護原則</block>
+  <block id="50b2dc093d74b71cb482308eb930fb02" category="section-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block> 發生災難時、請還原您的應用程式</block>
+  <block id="53c5fac0ba78b08ca3f0a270b746c5d2" category="section-title">重設其他使用者的密碼</block>
+  <block id="edb74efc05972c268b6cccf83996ac3e" category="section-title">變更使用者角色</block>
 </blocks>

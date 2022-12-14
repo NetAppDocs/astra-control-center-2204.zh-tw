@@ -14,10 +14,10 @@ summary: 安裝Astra Control Center、登入UI並變更密碼之後、您將需�
 Astra Control Center支援ONTAP 並監控將支援及Astra Data Store做為儲存後端。安裝Astra Control Center、登入UI並變更密碼之後、您將需要設定授權、新增叢集、管理儲存設備及新增儲存區。
 
 .工作
-*  a license for Astra Control Center
-*  cluster
-*  a storage backend
-*  a bucket
+* <<新增Astra Control Center授權>>
+* <<新增叢集>>
+* <<新增儲存後端>>
+* <<新增儲存庫>>
 
 
 
@@ -38,6 +38,7 @@ Astra Control Center授權會使用Kubernetes CPU單元來測量CPU資源。授�
 
 NOTE: 如果您的安裝量成長到超過授權的CPU單元數量、Astra Control Center會防止您管理新的應用程式。超過容量時會顯示警示。
 
+.您需要的產品
 當您從下載Astra Control Center時 https://mysupport.netapp.com/site/products/all/details/astra-control-center/downloads-tab["NetApp 支援網站"^]下載NetApp授權檔案（NLF）。請確定您有權存取此授權檔案。
 
 .步驟
@@ -67,11 +68,11 @@ TIP: 我們建議Astra Control Center先管理部署於上的叢集、再將其�
 當Astra Control管理叢集時、它會追蹤叢集的預設儲存類別。如果您使用「kubecll」命令變更儲存類別、Astra Control會還原變更。若要變更由Astra Control管理之叢集中的預設儲存類別、請使用下列其中一種方法：
 
 * 使用Astra Control API「PUT /managedClusters'端點」、並使用「DefaultStorageClass」參數指派不同的預設儲存類別。
-* 使用Astra Control Web UI指派不同的預設儲存類別。請參閱  the default storage class。
+* 使用Astra Control Web UI指派不同的預設儲存類別。請參閱 <<變更預設儲存類別>>。
 
 
 ====
-.您需要的是 #8217 ；需要的是什麼
+.您需要的產品
 * 新增叢集之前、請先檢閱並執行必要的 link:add-cluster-reqs.html["必要工作"^]。
 
 
@@ -102,6 +103,7 @@ image:cluster-storage.png["顯示要用於叢集的儲存類別。"]
 . 檢閱資訊、如果一切正常、請選取*新增叢集*。
 
 
+.結果
 叢集會進入*探索*狀態、然後變更為*執行中*。您已成功新增Kubernetes叢集、現在正在Astra Control Center中進行管理。
 
 
@@ -115,7 +117,7 @@ IMPORTANT: 在Astra Control Center中新增要管理的叢集之後、可能需�
 
 將Astra Control中的儲存叢集管理為儲存後端、可讓您在持續磁碟區（PV）與儲存後端之間建立連結、以及取得額外的儲存指標。
 
-.您的部署需求：#8217；現有Astra Data Store部署的需求
+.現有Astra Data Store部署所需的資源
 * 您已新增Kubernetes應用程式叢集和基礎運算叢集。
 +
 
@@ -123,15 +125,15 @@ IMPORTANT: 在您新增適用於Astra Data Store的Kubernetes應用程式叢集�
 
 
 
-.您的部署需求：#8217；需要新的Astra Data Store部署
+.全新Astra Data Store部署所需的資源
 * 您有 link:../use/manage-packages-acc.html["已上傳您要部署的安裝套件版本"] 至Astra Control可存取的位置。
 * 您已新增要用於部署的Kubernetes叢集。
-* 您已上傳  a license for Astra Control Center,Astra Data Store授權 部署至Astra Control可存取的位置。
+* 您已上傳 <<新增Astra Control Center授權,Astra Data Store授權>> 部署至Astra Control可存取的位置。
 
 
 .選項
-*  storage resources
-*  an existing storage backend
+* <<部署儲存資源>>
+* <<使用現有的儲存後端>>
 
 
 
@@ -200,6 +202,7 @@ NOTE: 為每個節點的金鑰建立至少三個唯一的標籤。例如、如�
 . 檢查組態、然後選取*部署*開始安裝。
 
 
+.結果
 成功安裝之後、後端會在後端清單中以「Available（可用）」狀態顯示、並顯示作用中的效能資訊。
 
 
@@ -244,6 +247,7 @@ NOTE: 您可能需要重新整理頁面、以便顯示後端。
 
 
 
+.結果
 後端會以「可用」狀態顯示在清單中、並顯示摘要資訊。
 
 
@@ -291,7 +295,7 @@ TIP: 庫位名稱和說明會顯示為備份位置、您可以在建立備份時
 
 NOTE: 此選項不會出現在您所建立的第一個儲存區。
 
-.. 請繼續新增  S3 access credentials,認證資訊。
+.. 請繼續新增 <<新增S3存取認證,認證資訊>>。
 
 
 
