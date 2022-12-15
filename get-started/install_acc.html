@@ -1452,7 +1452,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-22 23:48:15 +0000">11/22/2022</time>
+    <time datetime="2022-12-15 14:56:38 +0000">12/15/2022</time>
     
   
 
@@ -1471,7 +1471,7 @@
 <p>對於Red Hat OpenShift環境、您也可以使用 <a href="../get-started/acc_operatorhub_install.html">"替代程序"</a> 使用OpenShift作業系統集線器安裝Astra Control Center。</p>
 </div>
 <div class="ulist">
-<div class="title">您需要的是 #8217 ；需要的是什麼</div>
+<div class="title">您需要的產品</div>
 <ul>
 <li>
 <p><a href="requirements.html">"開始安裝之前、請先準備好環境以進行Astra Control Center部署"</a>。</p>
@@ -1504,6 +1504,7 @@
 </ul>
 </div>
 <div class="paragraph">
+<div class="title">關於這項工作</div>
 <p>Astra Control Center安裝程序會執行下列作業：</p>
 </div>
 <div class="ulist">
@@ -1562,39 +1563,40 @@
 </table>
 </div>
 <div class="paragraph">
+<div class="title">步驟</div>
 <p>若要安裝Astra Control Center、請執行下列步驟：</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>and unpack the Astra Control Center bundle</p>
+<p><a href="#下載並解壓縮astra-control-center套裝組合">下載並解壓縮Astra Control Center套裝組合</a></p>
 </li>
 <li>
-<p>the NetApp Astra kubectl plugin</p>
+<p><a href="#安裝netapp-astra-kubecl外掛程式">安裝NetApp Astra kubecl外掛程式</a></p>
 </li>
 <li>
-<p>the images to your local registry</p>
+<p><a href="#將映像新增至本機登錄">將映像新增至本機登錄</a></p>
 </li>
 <li>
-<p>up namespace and secret for registries with auth requirements</p>
+<p><a href="#設定具有驗證需求之登錄的命名空間和機密">設定具有驗證需求之登錄的命名空間和機密</a></p>
 </li>
 <li>
-<p>the Astra Control Center operator</p>
+<p><a href="#安裝astra-control-center操作員">安裝Astra Control Center操作員</a></p>
 </li>
 <li>
-<p>Astra Control Center</p>
+<p><a href="#設定astra控制中心">設定Astra控制中心</a></p>
 </li>
 <li>
-<p>Astra Control Center and operator installation</p>
+<p><a href="#完整的astra控制中心和操作員安裝">完整的Astra控制中心和操作員安裝</a></p>
 </li>
 <li>
-<p>system status</p>
+<p><a href="#驗證系統狀態">驗證系統狀態</a></p>
 </li>
 <li>
-<p>up ingress for load balancing</p>
+<p><a href="#設定入口以進行負載平衡">設定入口以進行負載平衡</a></p>
 </li>
 <li>
-<p>in to the Astra Control Center UI</p>
+<p><a href="#登入astra-control-center-ui">登入Astra Control Center UI</a></p>
 </li>
 </ul>
 </div>
@@ -1638,6 +1640,7 @@
 <p>NetApp Astra「kubecll」命令列外掛程式可在執行與部署及升級Astra Control Center相關的一般工作時節省時間。</p>
 </div>
 <div class="paragraph">
+<div class="title">您需要的產品</div>
 <p>NetApp為不同的CPU架構和作業系統提供外掛程式的二進位檔。執行此工作之前、您必須先瞭解您的CPU和作業系統。在Linux和Mac作業系統上、您可以使用「uname -A」命令來收集此資訊。</p>
 </div>
 <div class="olist arabic">
@@ -1871,10 +1874,10 @@ done</pre>
 </div>
 </li>
 <li>
-<p>將「kube-RBAC代理」映像的「[your _register_path]」變更為您將映像推入的登錄路徑 ,上一步。</p>
+<p>將「kube-RBAC代理」映像的「[your _register_path]」變更為您將映像推入的登錄路徑 <a href="#substep_image_local_registry_push">上一步</a>。</p>
 </li>
 <li>
-<p>將「acc oper-manager-manager」映像的「[your _register_path]」變更為您將映像推入的登錄路徑 ,上一步。</p>
+<p>將「acc oper-manager-manager」映像的「[your _register_path]」變更為您將映像推入的登錄路徑 <a href="#substep_image_local_registry_push">上一步</a>。</p>
 </li>
 <li>
 <p>（若為使用Astra Data Store預覽的安裝）請參閱此已知問題 <a href="../release-notes/known-issues-ads.html#astra-data-store-cannot-be-used-as-a-storage-class-for-astra-control-center-due-to-mongodb-pod-liveness-probe-failure">"儲存類別資源配置工具、以及您需要對Y反 洗錢進行的其他變更"</a>。</p>
@@ -2014,10 +2017,10 @@ deployment.apps/acc-operator-controller-manager created</pre>
 <p>將「帳戶名稱」字串變更為您要與帳戶建立關聯的名稱。</p>
 </li>
 <li>
-<p>將「astraAddress」字串變更為您要在瀏覽器中用來存取Astra的FQDN。請勿在地址中使用「http：//」或「https：//」。複製此FQDN以供在中使用  in to the Astra Control Center UI,後續步驟。</p>
+<p>將「astraAddress」字串變更為您要在瀏覽器中用來存取Astra的FQDN。請勿在地址中使用「http：//」或「https：//」。複製此FQDN以供在中使用 <a href="#登入astra-control-center-ui">後續步驟</a>。</p>
 </li>
 <li>
-<p>將「電子郵件」字串變更為預設的初始系統管理員地址。複製此電子郵件地址以供在中使用  in to the Astra Control Center UI,後續步驟。</p>
+<p>將「電子郵件」字串變更為預設的初始系統管理員地址。複製此電子郵件地址以供在中使用 <a href="#登入astra-control-center-ui">後續步驟</a>。</p>
 </li>
 <li>
 <p>如果網站沒有網際網路連線、請將AutoSupport 「已註冊」改為「假」、否則連線網站則保留「真」。</p>
@@ -2029,7 +2032,7 @@ deployment.apps/acc-operator-controller-manager created</pre>
 <p>（可選）如果安裝需要、請將「儲存類別」值變更為其他Trident storageClass資源。</p>
 </li>
 <li>
-<p>（選用）如果您希望叢集在安裝後由Astra Control Center自動管理、而且您已經擁有 ,已建立包含此叢集之Kbeconfig的秘密下、在這個名為「astraKubeConfigSecret："Acc－kubeconfig－cred or custom secret name"的Yaml檔案中新增欄位、以提供密碼名稱</p>
+<p>（選用）如果您希望叢集在安裝後由Astra Control Center自動管理、而且您已經擁有 <a href="#substep_kubeconfig_secret">已建立包含此叢集之Kbeconfig的秘密</a>下、在這個名為「astraKubeConfigSecret："Acc－kubeconfig－cred or custom secret name"的Yaml檔案中新增欄位、以提供密碼名稱</p>
 </li>
 <li>
 <p>請完成下列其中一個步驟：</p>
@@ -2278,8 +2281,8 @@ vault-controller-86c94fbf4f-krttq          1/1     Running   0          9m24s</p
 </li>
 </ol>
 </div>
-<div class="exampleblock">
-<div class="title">範例 1. Y反 洗錢詳細資料範例</div>
+<details>
+<summary class="title">Y反 洗錢詳細資料範例</summary>
 <div class="content">
 <div class="listingblock">
 <div class="content">
@@ -2503,7 +2506,7 @@ metadata:
 </div>
 </div>
 </div>
-</div>
+</details>
 </div>
 </div>
 <div class="sect1">
@@ -2541,7 +2544,7 @@ metadata:
 </ul>
 </div>
 <div class="ulist">
-<div class="title">您需要的是 #8217 ；需要的是什麼</div>
+<div class="title">您需要的產品</div>
 <ul>
 <li>
 <p>必要的 <a href="https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/">"入口控制器"</a> 應已部署。</p>
@@ -2558,7 +2561,7 @@ metadata:
 <div class="title">適用於Nginvin像 控制器的步驟</div>
 <ol class="arabic">
 <li>
-<p>建立類型的秘密 <a href="http://kubernetes.io/tls">"「Kubernetes.IO/TLS」"</a> 如所述、在「NetApp-acc」（或自訂命名）命名空間中取得TLS私密金鑰和憑證 <a href="https://kubernetes.io/docs/concepts/configuration/secret/#tls-secrets">"TLS機密"</a>。</p>
+<p>建立類型的秘密 <a href="http://kubernetes.io/tls">"8a637503539b25b68130b6e8003579d9"</a> 如所述、在「NetApp-acc」（或自訂命名）命名空間中取得TLS私密金鑰和憑證 <a href="https://kubernetes.io/docs/concepts/configuration/secret/#tls-secrets">"TLS機密"</a>。</p>
 </li>
 <li>
 <p>使用「v1beta1」（Kubernetes版本低於或1.22）或「v1」資源類型、部署「NetApp-acc」（或自訂命名）命名空間中的入口資源、以取代已過時或新架構：</p>
@@ -2656,7 +2659,7 @@ spec:
 <div class="title">步驟</div>
 <ol class="arabic">
 <li>
-<p>在瀏覽器中、輸入您在「Astra Address」（astrAddress）中使用的FQDN、位於「Astra控制中心_min.yaml」（當）字段中  Astra Control Center,您安裝了Astra Control Center。</p>
+<p>在瀏覽器中、輸入您在「Astra Address」（astrAddress）中使用的FQDN、位於「Astra控制中心_min.yaml」（當）字段中 <a href="#安裝Astra Control Center">您安裝了Astra Control Center</a>。</p>
 </li>
 <li>
 <p>出現提示時、請接受自我簽署的憑證。</p>
@@ -2674,7 +2677,7 @@ spec:
 </div>
 </li>
 <li>
-<p>在Astra Control Center登入頁面中、輸入您在「Astra Control Center_min.yaml」CR中使用的「電子郵件」值  Astra Control Center,您安裝了Astra Control Center，然後是一次性密碼（「ACC-[UUUID]」）。</p>
+<p>在Astra Control Center登入頁面中、輸入您在「Astra Control Center_min.yaml」CR中使用的「電子郵件」值 <a href="#安裝Astra Control Center">您安裝了Astra Control Center</a>，然後是一次性密碼（「ACC-[UUUID]」）。</p>
 <div class="admonitionblock note">
 <table>
 <tr>
