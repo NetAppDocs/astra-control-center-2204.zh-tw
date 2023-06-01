@@ -48,7 +48,7 @@ https://www.netapp.com/us/legal/privacypolicy/index.aspx[]
 
 == Astra Control API授權
 
-https://docs.netapp.com/us-en/astra-automation/media/astra-api-license.pdf[]
+https://docs.netapp.com/us-en/astra-automation-2204/media/astra-api-license.pdf[]
 
 
 

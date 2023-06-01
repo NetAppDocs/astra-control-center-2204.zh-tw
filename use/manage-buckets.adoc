@@ -33,7 +33,7 @@ NOTE: 雖然Astra Control Center支援Amazon S3做為通用S3儲存區供應商�
 * 已移除：目前無法存取儲存貯體。
 
 
-如需如何使用Astra Control API管理儲存區的指示、請參閱 link:https://docs.netapp.com/us-en/astra-automation/["Astra Automation和API資訊"^]。
+如需如何使用Astra Control API管理儲存區的指示、請參閱 link:https://docs.netapp.com/us-en/astra-automation-2204/["Astra Automation和API資訊"^]。
 
 您可以執行與管理儲存庫相關的工作：
 
@@ -97,7 +97,7 @@ TIP: 您新增至Astra Control的第一組認證資料一律使用中、因為As
 
 NOTE: 如果您確實移除作用中的儲存區認證、請參閱 https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Astra/Deleting_active_S3_bucket_credentials_leads_to_spurious_500_errors_reported_in_the_UI["移除庫位認證疑難排解"]。
 
-如需如何使用Astra Control API移除S3認證的指示、請參閱 link:https://docs.netapp.com/us-en/astra-automation/["Astra Automation和API資訊"^]。
+如需如何使用Astra Control API移除S3認證的指示、請參閱 link:https://docs.netapp.com/us-en/astra-automation-2204/["Astra Automation和API資訊"^]。
 
 
 
@@ -130,5 +130,5 @@ NOTE: Astra Control會先確保不會有使用儲存庫進行備份的排程原�
 
 == 如需詳細資訊、請參閱
 
-* https://docs.netapp.com/us-en/astra-automation/index.html["使用Astra Control API"^]
+* https://docs.netapp.com/us-en/astra-automation-2204/index.html["使用Astra Control API"^]
 

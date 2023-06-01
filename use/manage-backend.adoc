@@ -13,7 +13,7 @@ summary: 為內部部署的Kubernetes應用程式新增儲存設備。Astra Cont
 
 將Astra Control中的儲存叢集管理為儲存後端、可讓您在持續磁碟區（PV）與儲存後端之間建立連結、以及取得額外的儲存指標。如果Astra Control Center連接Cloud Insights 到VMware、您可以監控儲存容量和健全狀況詳細資料、包括效能。
 
-如需如何使用Astra Control API管理儲存後端的指示、請參閱 link:https://docs.netapp.com/us-en/astra-automation/["Astra Automation和API資訊"^]。
+如需如何使用Astra Control API管理儲存後端的指示、請參閱 link:https://docs.netapp.com/us-en/astra-automation-2204/["Astra Automation和API資訊"^]。
 
 您可以完成下列與管理儲存後端相關的工作：
 
@@ -215,5 +215,5 @@ TIP: 如果您要移除Astra Data Store後端、則vCenter不得建立該後端�
 
 == 如需詳細資訊、請參閱
 
-* https://docs.netapp.com/us-en/astra-automation/index.html["使用Astra Control API"^]
+* https://docs.netapp.com/us-en/astra-automation-2204/index.html["使用Astra Control API"^]
 

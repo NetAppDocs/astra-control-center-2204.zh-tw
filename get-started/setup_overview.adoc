@@ -24,7 +24,7 @@ Astra Control Center支援ONTAP 並監控將支援及Astra Data Store做為儲�
 
 == 新增Astra Control Center授權
 
-您可以使用UI或新增授權 https://docs.netapp.com/us-en/astra-automation/index.html["API"^] 以獲得完整的Astra控制中心功能。若無授權、您使用Astra Control Center的使用僅限於管理使用者及新增叢集。
+您可以使用UI或新增授權 https://docs.netapp.com/us-en/astra-automation-2204/index.html["API"^] 以獲得完整的Astra控制中心功能。若無授權、您使用Astra Control Center的使用僅限於管理使用者及新增叢集。
 
 如需如何計算授權的詳細資訊、請參閱 link:../concepts/licensing.html["授權"]。
 
@@ -348,6 +348,6 @@ NOTE: 此選項不會出現在您所建立的第一個儲存區。
 [discrete]
 == 如需詳細資訊、請參閱
 
-* https://docs.netapp.com/us-en/astra-automation/index.html["使用Astra Control API"^]
+* https://docs.netapp.com/us-en/astra-automation-2204/index.html["使用Astra Control API"^]
 * link:../release-notes/known-issues.html["已知問題"]
 

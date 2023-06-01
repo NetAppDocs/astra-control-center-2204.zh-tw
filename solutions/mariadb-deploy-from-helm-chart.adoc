@@ -15,8 +15,7 @@ summary: 從Bitnami Helm圖表瞭解如何部署MariaDB。在叢集上部署Mari
 
 MariaDB是Astra驗證的應用程式。
 
-* https://docs.netapp.com/us-en/astra/learn/validated-vs-standard.html["瞭解Astra Control Service中已驗證的應用程式與標準應用程式之間的差異"^]。
-* https://docs.netapp.com/us-en/astra-control-center/concepts/validated-vs-standard.html["瞭解Astra Control Center中已驗證的應用程式與標準應用程式之間的差異"^]。
+* https://docs.netapp.com/us-en/astra-control-center-2204/concepts/validated-vs-standard.html#validated-apps["瞭解已驗證的應用程式與 Astra Control 中的標準應用程式之間的差異"^]。
 
 
 這些指示適用於Astra Control Service和Astra Control Center。
