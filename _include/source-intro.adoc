@@ -69,7 +69,7 @@ Astra Control提供兩種部署模式：
 
 NetApp已驗證某些應用程式、以確保快照與備份的安全性與一致性。
 
-* https://docs.netapp.com/us-en/astra-control-center-2204/concepts/validated-vs-standard.html#validated-apps["瞭解已驗證的應用程式與 Astra Control 中的標準應用程式之間的差異"^]。
+* link:../concepts/validated-vs-standard.html#validated-apps["瞭解已驗證的應用程式與 Astra Control 中的標準應用程式之間的差異"^]。
 
 
 無論您使用哪種類型的應用程式搭配Astra Control、您都應該自行測試備份與還原工作流程、以確保符合災難恢復需求。

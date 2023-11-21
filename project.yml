@@ -1,28 +1,25 @@
 ---
 settings:
-  name: Astra Control Center 22.04 documentation
+  name: Astra Control Center
+  downlevel: true
   internal:
     pdf_enabled: true
   prod:
     pdf_enabled: true
     harmony_enabled: false
   versions:
-  - name: Astra控制中心
+  - version-number: '22.04'
     url: "/astra-control-center-2204"
-    version-number: '22.04'
-  - name: Astra控制中心
-    url: "/astra-control-center"
-    version-number: '22.08'
-  - name: Astra控制中心
+  - version-number: '22.08'
+    url: "/astra-control-center-2208"
+  - version-number: '21.12'
     url: "/astra-control-center-2112"
-    version-number: '21.12'
-  - name: Astra控制中心
+  - version-number: '21.08'
     url: "/astra-control-center-2108"
-    version-number: '21.08'
   langs: zh-tw,us-en,ja-jp,ko-kr,zh-cn,de-de,es-es,fr-fr,it-it
 sidebar:
   entries:
-  - title: Astra Control Center 22.04文件
+  - title: Astra Control Center 22.04 文件
     url: "/index.html"
   - section: release-notes
   - section: concepts
@@ -64,7 +61,7 @@ homepage:
     - title: 開始使用Astra Control API
       url: https://docs.netapp.com/us-en/astra-automation-2204/get-started/before_get_started.html
     - title: API 參考
-      url: https://docs.netapp.com/us-en/astra-automation-2204/reference/api_reference.html
+      url: https://docs.netapp.com/us-en/astra-automation-2204/
     - title: API工作流程
       url: https://docs.netapp.com/us-en/astra-automation-2204/workflows/workflows_before.html
   - title: 使用Astra Control Service

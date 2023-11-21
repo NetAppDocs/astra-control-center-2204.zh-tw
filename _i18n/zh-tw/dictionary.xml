@@ -1108,11 +1108,8 @@
   <block id="ac5af645cec8d25669a5a9893f571bcc" category="paragraph">請參閱<block ref="47e48c38bbba09ad0234959e4f70e6b5" category="inline-link-rx"></block>。</block>
   <block id="ffe7dbf60b2fbe9ee35b02eca9bedb83" category="section-title">設定Azure</block>
   <block id="daee2a4caddb0f1fced149c9b185ab3e" category="paragraph">接下來、設定Azure以建立虛擬網路、設定運算執行個體、建立Azure Blob容器、建立Azure Container Register（ACR）來裝載Astra Control Center映像、然後將映像推送至此登錄。</block>
-  <block id="310c2720a5523c6a1f55532ee951393c" category="paragraph">請依照Azure文件完成下列步驟。請參閱<block ref="604df1e02f9d2d76a67db6e61299339e" category="inline-link-rx"></block>。</block>
   <block id="52393bb21023d79ef4e0fa374e54b83d" category="list-text">建立Azure虛擬網路。</block>
   <block id="d03589157dd63e1aaf5497955f5058f5" category="list-text">檢閱運算執行個體。這可以是Azure中的裸機伺服器或VM。</block>
-  <block id="b82f3e0352c4295f8db3114c4d861a92" category="inline-link-macro">Astra Control Center需求</block>
-  <block id="8a803e817d15e18f4c26de7531681f8c" category="list-text">如果執行個體類型尚未符合主節點和工作節點的Astra最低資源需求、請變更Azure中的執行個體類型以符合Astra要求。請參閱 <block ref="69ebc365ae107089b5acea91d6e6ce3d" category="inline-link-macro-rx"></block>。</block>
   <block id="5df56ab7fcd23252a7ac4c7a21742e57" category="list-text">建立至少一個Azure Blob容器來儲存備份。</block>
   <block id="307374e80fc7db1b05d765029543d9c8" category="list-text">建立儲存帳戶。您需要儲存帳戶來建立容器、以便在Astra Control Center中作為儲存庫。</block>
   <block id="a9d92f56cc3dae134fc1ee53e8136378" category="list-text">建立儲存貯體存取所需的機密。</block>
@@ -2251,7 +2248,6 @@
   <block id="49ffba9fa4ce5bf749cec20def44c0b9" category="paragraph">如需安裝說明、請參閱上的 RedHat 說明文件<block ref="2b5694f45e8e8a8a0bd04ce92001fd2c" category="inline-link-rx"></block> 和<block ref="b57239f3f933c36abb901cdf3e168d8f" category="inline-link-rx"></block>。</block>
   <block id="d7e8ec4ac03380f7360b24b84e02bc2c" category="paragraph"><block ref="d7e8ec4ac03380f7360b24b84e02bc2c" category="inline-link-rx"></block></block>
   <block id="038aa329e12ca1821545cf4a1d938aed" category="inline-link">瞭解已驗證的應用程式與 Astra Control 中的標準應用程式之間的差異</block>
-  <block id="d5a3fd1c4ff9b924b82909f1b645bee8" category="list-text"><block ref="a3e4ce46068122a9dbb346a32a7b154f" category="inline-link-rx"></block>。</block>
   <block id="762ef43b4a11a511c62b8a4849953db5" category="paragraph">使用自動保護原則或臨機操作、拍攝快照和備份資料、保護您的應用程式。您可以使用Astra UI或<block ref="414551f2d63a329d9ffea01809d18802" category="inline-link-rx"></block> 保護應用程式。</block>
   <block id="f51de799c9cfab0438048b54a72c2933" category="admonition">無法停止執行中的備份。如果您需要刪除備份、請等到備份完成後再使用中的指示 <block ref="da28e1f6ad1e5135aab14ac0664600c6" category="inline-xref-macro-rx"></block>。若要刪除失敗的備份、<block ref="dd68bc92887523be75ee7ba01b4bcb4b" category="inline-link-rx"></block>。</block>
   <block id="4f1044e2106e85477990284013da9865" category="admonition">無法停止執行中的備份。如果您需要刪除備份、請等到備份完成後再使用這些指示。若要刪除失敗的備份、<block ref="dd68bc92887523be75ee7ba01b4bcb4b" category="inline-link-rx"></block>。</block>
@@ -2274,4 +2270,8 @@
   <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
+  <block id="56601abf9be7a15a9263f590e5b72309" category="paragraph">請依照Azure文件完成下列步驟。請參閱<block ref="9ba71785f6bcafa8653bf6ebf2656742" category="inline-link-rx"></block>。</block>
+  <block id="802adae5487ced22b70180d969f7750c" category="list-text">如果執行個體類型尚未符合主節點和工作節點的Astra最低資源需求、請變更Azure中的執行個體類型以符合Astra要求。  請參閱 <block ref="a41c664e3d2520e4c4deb907d0286272" category="inline-link-macro-rx"></block>。</block>
+  <block id="4d7203e3cc3e9782de01bf1c152c7952" category="list-text"><block ref="bb1d5de9fc6b24a8ee91128103dfdee9" category="inline-link-macro-rx"></block>。</block>
+  <block id="f04289013cb8b30466cb952e21a82c10" category="sidebar">Astra Control Center 22.04 文件</block>
 </blocks>
