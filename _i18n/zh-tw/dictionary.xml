@@ -64,7 +64,6 @@
   <block id="c3314925ef2c97256c3237a450d6f4f5" category="list-text">Trident儲存後端搭配ONTAP 支援更新版本的支援</block>
   <block id="5b4b1a973a4751fbfc2fda3bd9bac412" category="list-text">Astra Data Store儲存後端</block>
   <block id="51269e2584d26b04961877ec77db6da7" category="paragraph">在雲端連線的環境中、Astra Control Center使用Cloud Insights 「資訊中心」來提供進階的監控和遙測功能。若缺乏Cloud Insights 支援鏈接、Astra Control Center可提供有限（7天數據）的監控與遙測功能、並透過開放式指標端點匯出至Kubernetes原生監控工具（例如Prometheus和Grafana）。</block>
-  <block id="ea2708b459fc0cad6936ec216bd9405e" category="paragraph">Astra Control Center已完全整合AutoSupport 至整套的功能、可Active IQ 為使用者和NetApp支援人員提供疑難排解和使用資訊。</block>
   <block id="26849905a5aa23f71bc18ee28e352604" category="paragraph">您可以使用90天試用版授權試用Astra Control Center。評估版本可透過電子郵件和社群（Slack Channel）選項來支援。此外、您也可以從產品內的支援儀表板存取知識庫文章和文件。</block>
   <block id="b4851e92b19af0c5c82447fc0937709d" category="inline-link">需求</block>
   <block id="e63cc3795b9216d59b085bd3111a248d" category="paragraph">若要安裝及使用Astra Control Center、您必須符合特定需求<block ref="bdde32b2c988689d803729c06660acb4" category="inline-link-rx"></block>。</block>
@@ -1281,7 +1280,6 @@
   <block id="35f3a2f7a0f2c01d03afedb95ece66ab" category="inline-link">NetApp驗證檔案上傳（需要登入）</block>
   <block id="1c2989d4329c8aeec5e01506816fb04e" category="list-text">使用<block ref="4b0bc63f683ccbf4dcf0ba2a6a1b561f" category="inline-link-rx"></block>。</block>
   <block id="94bcffc8ff8a109a8267202d2aaa5526" category="list-text">將套裝組合直接附加至nss.</block>
-  <block id="4345f2150d39e38a6a11ee7ee57bed28" category="list-text">使用NetApp Active IQ 解決方案。</block>
   <block id="3d1c04820861e371e0246d54b6519853" category="summary">如果您想要備份應用程式和持續儲存設備、或是想要跨叢集複製應用程式、則必須新增物件存放區資源庫供應商。</block>
   <block id="c6026de894eab4233269713f21d557bb" category="paragraph">如果您想要備份應用程式和持續儲存設備、或是想要跨叢集複製應用程式、物件存放區供應商是不可或缺的。使用Astra Control Center、新增物件存放區供應商做為您的應用程式離叢集備份目的地。</block>
   <block id="aa1c9c743a5fbecf89d523d193760e14" category="paragraph">請使用下列其中一家Amazon Simple Storage Service（S3）資源庫供應商：</block>
@@ -2274,4 +2272,6 @@
   <block id="802adae5487ced22b70180d969f7750c" category="list-text">如果執行個體類型尚未符合主節點和工作節點的Astra最低資源需求、請變更Azure中的執行個體類型以符合Astra要求。  請參閱 <block ref="a41c664e3d2520e4c4deb907d0286272" category="inline-link-macro-rx"></block>。</block>
   <block id="4d7203e3cc3e9782de01bf1c152c7952" category="list-text"><block ref="bb1d5de9fc6b24a8ee91128103dfdee9" category="inline-link-macro-rx"></block>。</block>
   <block id="f04289013cb8b30466cb952e21a82c10" category="sidebar">Astra Control Center 22.04 文件</block>
+  <block id="a9cf730f8ab04a5b52f1d19c74c1483c" category="paragraph">Astra Control Center 已完全整合至 AutoSupport 和 Active IQ 數位顧問（也稱為數位顧問）生態系統、為使用者和 NetApp 支援提供疑難排解和使用資訊。</block>
+  <block id="3cf9bc07c0ae31018d3336b8f32de6c8" category="list-text">使用 Digital Advisor 。</block>
 </blocks>
